@@ -26,7 +26,7 @@ namespace tarea
         private void BtnEviarCorreo_Click(object sender, EventArgs e)
         {
             CorreoElectronico a = new CorreoElectronico();
-            a.enviarFacturacionPorCorreoElectronico("TrabajosUniversitariosTEC@gmail.com", "");
+            a.enviarFacturacionPorCorreoElectronico("TrabajosUniversitariosTEC@gmail.com", "C:\\Users\\andres\\Desktop\\JorgeMoraComuTecnica.pdf");
         }
     }
 }
