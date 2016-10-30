@@ -44,10 +44,13 @@ namespace tarea
          * comando que realiza los update de la base de datos 
          * desde c#
          */
-        public void actualizarValoresBaseDatos(string query, string columna, string condicionWhere) {
-            string updateQuery = query + " where " + columna + "="  + condicionWhere;
+        public void actualizarValoresBaseDatos(string query, string columna, string condicionWhere)
+        {
+            abrirConexion();
+            string updateQuery = query + " where " + columna + "=="  + condicionWhere;
             SqlCommand comandoEjecutar = new SqlCommand(updateQuery, conexionBaseDatos);
             comandoEjecutar.ExecuteNonQuery();
+            cerrarConexion();
         }
 
         /*
@@ -56,31 +59,48 @@ namespace tarea
          */
         public void eliminarValoresBaseDatos(string tabla, string columna, string condicionWhere)
         {
-            string updateQuery = "delete from "+tabla + " where "+ columna +"=" + condicionWhere;
-            SqlCommand comandoEjecutar = new SqlCommand(updateQuery, conexionBaseDatos);
+            abrirConexion();
+            string deleteQuery = "delete from "+tabla + " where "+ columna +"==" + condicionWhere;
+            SqlCommand comandoEjecutar = new SqlCommand(deleteQuery, conexionBaseDatos);
             comandoEjecutar.ExecuteNonQuery();
+            cerrarConexion();
         }
 
         /*
          * comando que realiza los select de la base de datos 
          * desde c#
          */
-        public void seleccionarValoresBaseDatos()
+        public void seleccionarValoresBaseDatos(DataGridView ventana, string tabla, string columna, string condicion)
         {
-            /*
-             * aqui voy a copiar el codigo de la progra pasada
-             */
+            abrirConexion();
+            System.Data.DataSet dataSet = new System.Data.DataSet();
+            string selectQuery;
+            if (condicion != "")
+            {
+                selectQuery = "select " + columna + " from " + tabla + " were " + columna + "==" + condicion;
+            }
+            else
+            {
+                selectQuery = "select " + columna + " from " + tabla ;
+            }
+            SqlDataAdapter MiDataAdapter = new SqlDataAdapter(selectQuery, conexionBaseDatos);
+            MiDataAdapter.Fill(dataSet, columna);
+            ventana.DataSource = dataSet;
+            ventana.DataMember = columna;
+            cerrarConexion();
         }
 
         /*
          * comando que realiza los insert de la base de datos 
          * desde c#
          */
-        public void agregarValoresBaseDatos(string tabla, string columna, string atributos)
+        public void agregarValoresBaseDatos(string tabla, string columna, string atributo)
         {
-            string updateQuery = "INSERT INTO"+ tabla+"("+columna+") Values ("+atributos +")"; 
+            abrirConexion();
+            string updateQuery = "INSERT INTO"+ tabla+"("+columna+") Values ("+atributo +")"; 
             SqlCommand comandoEjecutar = new SqlCommand(updateQuery, conexionBaseDatos);
             comandoEjecutar.ExecuteNonQuery();
+            cerrarConexion();
         }
 
     }
