@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace tarea
 {
-    class Funcionalidades
+    class ConexionSQLVisualStudio
     {
         /*
          * atributo necesario para la conexion con 
@@ -20,7 +20,7 @@ namespace tarea
          * inicializa la clase que conecta con sql server
          * con el string de la conexion
          */
-        public Funcionalidades(string stringConexion) {
+        public ConexionSQLVisualStudio(string stringConexion) {
             conexionBaseDatos = new SqlConnection(stringConexion);
         }
 
