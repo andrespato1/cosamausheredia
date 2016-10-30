@@ -54,28 +54,33 @@ namespace tarea
          * comando que realiza los delete de la base de datos 
          * desde c#
          */
-        public void eliminarValoresBaseDatos(string tabla, string condicionWhere)
+        public void eliminarValoresBaseDatos(string tabla, string columna, string condicionWhere)
         {
-            string updateQuery = "delete from "+tabla + " where "+ tabla +"=" + condicionWhere;
+            string updateQuery = "delete from "+tabla + " where "+ columna +"=" + condicionWhere;
             SqlCommand comandoEjecutar = new SqlCommand(updateQuery, conexionBaseDatos);
             comandoEjecutar.ExecuteNonQuery();
         }
 
         /*
-         * comando que realiza los delete de la base de datos 
+         * comando que realiza los select de la base de datos 
          * desde c#
          */
-        public void seleccionarValoresBaseDatos(string tabla, string condicionWhere)
+        public void seleccionarValoresBaseDatos()
         {
-            string updateQuery = "delete from " + tabla + " where " + tabla + "=" + condicionWhere;
+            /*
+             * aqui voy a copiar el codigo de la progra pasada
+             */
+        }
+
+        /*
+         * comando que realiza los insert de la base de datos 
+         * desde c#
+         */
+        public void agregarValoresBaseDatos(string tabla, string columna, string atributos)
+        {
+            string updateQuery = "INSERT INTO"+ tabla+"("+columna+") Values ("+atributos +")"; 
             SqlCommand comandoEjecutar = new SqlCommand(updateQuery, conexionBaseDatos);
-            if (comandoEjecutar.ExecuteNonQuery() == 1)
-            {
-                MessageBox.Show("La operacion se realizo exitosamente");
-            }
-            else {
-                MessageBox.Show("Error no se pudo realizar la operacion \n intente mas tarde");
-            }
+            comandoEjecutar.ExecuteNonQuery();
         }
 
     }
