@@ -12,7 +12,7 @@ namespace tarea
     {
         /*
          * atributo necesario para la conexion con 
-         * sql server
+         * sql server.
          */
         SqlConnection conexionBaseDatos;
 
