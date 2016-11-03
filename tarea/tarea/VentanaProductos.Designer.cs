@@ -41,11 +41,13 @@
             this.TxtCostUnitario = new System.Windows.Forms.TextBox();
             this.TxtImpuestos = new System.Windows.Forms.TextBox();
             this.TxtPrecVtaUnit = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DataGridProductos = new System.Windows.Forms.DataGridView();
             this.TxtBusquedaProductos = new System.Windows.Forms.TextBox();
             this.BtnBusquedaProductos = new System.Windows.Forms.Button();
             this.CBAtributosProductos = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.BtnEliminar = new System.Windows.Forms.Button();
+            this.BtnActualizar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnAgregarProducto
@@ -154,13 +156,13 @@
             this.TxtPrecVtaUnit.Size = new System.Drawing.Size(100, 20);
             this.TxtPrecVtaUnit.TabIndex = 12;
             // 
-            // dataGridView1
+            // DataGridProductos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(350, 49);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(433, 191);
-            this.dataGridView1.TabIndex = 13;
+            this.DataGridProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridProductos.Location = new System.Drawing.Point(350, 49);
+            this.DataGridProductos.Name = "DataGridProductos";
+            this.DataGridProductos.Size = new System.Drawing.Size(433, 191);
+            this.DataGridProductos.TabIndex = 13;
             // 
             // TxtBusquedaProductos
             // 
@@ -186,15 +188,35 @@
             this.CBAtributosProductos.Size = new System.Drawing.Size(157, 21);
             this.CBAtributosProductos.TabIndex = 16;
             // 
+            // BtnEliminar
+            // 
+            this.BtnEliminar.Location = new System.Drawing.Point(12, 222);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(100, 24);
+            this.BtnEliminar.TabIndex = 17;
+            this.BtnEliminar.Text = "Eliminar";
+            this.BtnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // BtnActualizar
+            // 
+            this.BtnActualizar.Location = new System.Drawing.Point(12, 192);
+            this.BtnActualizar.Name = "BtnActualizar";
+            this.BtnActualizar.Size = new System.Drawing.Size(100, 24);
+            this.BtnActualizar.TabIndex = 18;
+            this.BtnActualizar.Text = "Actualizar";
+            this.BtnActualizar.UseVisualStyleBackColor = true;
+            // 
             // VentanaProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(799, 258);
+            this.Controls.Add(this.BtnActualizar);
+            this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.CBAtributosProductos);
             this.Controls.Add(this.BtnBusquedaProductos);
             this.Controls.Add(this.TxtBusquedaProductos);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DataGridProductos);
             this.Controls.Add(this.TxtPrecVtaUnit);
             this.Controls.Add(this.TxtImpuestos);
             this.Controls.Add(this.TxtCostUnitario);
@@ -210,7 +232,7 @@
             this.Controls.Add(this.BtnAgregarProducto);
             this.Name = "VentanaProductos";
             this.Text = "VentanaProductos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,9 +253,11 @@
         private System.Windows.Forms.TextBox TxtCostUnitario;
         private System.Windows.Forms.TextBox TxtImpuestos;
         private System.Windows.Forms.TextBox TxtPrecVtaUnit;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DataGridProductos;
         private System.Windows.Forms.TextBox TxtBusquedaProductos;
         private System.Windows.Forms.Button BtnBusquedaProductos;
         private System.Windows.Forms.ComboBox CBAtributosProductos;
+        private System.Windows.Forms.Button BtnEliminar;
+        private System.Windows.Forms.Button BtnActualizar;
     }
 }
