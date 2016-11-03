@@ -15,6 +15,46 @@ create table condicionPago
 	(nombreCondicion		char(40),
 	primary key(nombreCondicion))
 
+create table cliente
+	(codigoCliente			int not null check (codigoCliente > 0 and codigoCliente <= 9999),
+	nombre					char(60),
+	direccion				char(180),
+	codigoPostal			char(12),
+	paisUbic				char(3),
+	telefono				int not null check (telefono > 0 and telefono <= 99999999),
+	email					char(60),
+	fechaInicioR			date,
+	limiteCred				numeric(7,0),
+	dirEntregaProd			char(180),
+	nombreCondicion			char (40),
+	primary key(codigoCliente),
+	foreign key (nombreCondicion) references condicionPago(nombreCondicion))
+
+create table facturas
+	(numFact				int  check (numFact > 0 and numFact <= 99999999),
+	fechaFact				date,
+	codigoCliente			int not null check (codigoCliente > 0 and codigoCliente <= 9999),
+	fechaVencim				date,
+	dirEntrega				char (180),
+	primary key (numFact),
+	foreign key (codigoCliente) references cliente(codigoCliente))
+
+create table personal
+	(IDPersonal				int not null check (IDPersonal > 0 and IDPersonal <= 9999),
+	puestoTrab				char (4),
+	nombre					char (20),
+	apellido1				char (20),
+	apellido2				char (20),
+	fechaNacim				date,
+	telefono				int not null check (telefono > 0 and telefono <= 99999999),
+	lugarResid				char (60),
+	email					char(60),
+	IDJefe					int  check (IDJefe > 0 and IDJefe <= 9999),
+	fechaIngreso			date,
+	fechaRetiro				date,
+	primary key (IDPersonal),
+	foreign key (IDJefe) references personal(IDPersonal))
+
 create table ctaPorCobrar
 	(numFact				int not null check (numFact > 0 and numFact <= 99999999), 
 	codigoCliente			int not null check (codigoCliente > 0 and codigoCliente <= 9999),
@@ -38,52 +78,11 @@ create table pedidos
 	motivoDescripcion		char (120),
 	primary key (numPedido),
 	foreign key (codigoCliente) references cliente(codigoCliente),
-	foreign key (numFact) references facturas(numFact),
+	foreign key (numFact) references facturas (numFact),
 	foreign key (IDPersonal) references personal(IDPersonal))
 
-create table cliente
-	(codigoCliente			int not null check (codigoCliente > 0 and codigoCliente <= 9999),
-	nombre					char(60),
-	direccion				char(180),
-	codigoPostal			char(12),
-	paisUbic				char(3),
-	telefono				int not null check (telefono > 0 and telefono <= 99999999),
-	email					char(60),
-	fechaInicioR			date,
-	limiteCred				numeric(7,0),
-	dirEntregaProd			char(180),
-	nombreCondicion			char (40),
-	primary key(codigoCliente),
-	foreign key (nombreCondicion) references condicionPago(nombreCondicion))
 
-create table personal
-	(IDPersonal				int not null check (IDPersonal > 0 and IDPersonal <= 9999),
-	puestoTrab				char (4),
-	nombre					char (20),
-	apellido1				char (20),
-	apellido2				char (20),
-	fechaNacim				date,
-	telefono				int not null check (telefono > 0 and telefono <= 99999999),
-	lugarResid				char (60),
-	email					char(60),
-	IDJefe					int  check (IDJefe > 0 and IDJefe <= 9999),
-	fechaIngreso			date,
-	fechaRetiro				date,
-	primary key (IDPersonal),
-	foreign key (IDJefe) references personal(IDPersonal))
-
-	create table facturas
-	(numFact				int not null check (numFact > 0 and numFact <= 99999999),
-	fechaFact				date,
-	codigoCliente			int not null check (codigoCliente > 0 and codigoCliente <= 9999),
-	fechaVencim				date,
-	dirEntrega				char (180),
-	primary key (numFact),
-	foreign key (codigoCliente) references cliente(codigoCliente))
-
-
-
-	create table seLeVende
+create table seLeVende
 	(codigoCliente			int not null check (codigoCliente > 0 and codigoCliente <= 9999),
 	SKU						int not null check (SKU >= 0 and SKU <= 999999),
 	primary key (codigoCliente, SKU),
@@ -91,7 +90,7 @@ create table personal
 	foreign key (SKU) references producto(SKU))
 
 
-	create table adquiere
+create table adquiere
 	(numFact				int not null check (numFact > 0 and numFact <= 99999999),
 	SKU						int not null check (SKU >= 0 and SKU <= 999999),
 	primary key (numFact, SKU),
@@ -99,14 +98,14 @@ create table personal
 	foreign key (SKU) references producto(SKU))
 
 
-	create table seObtieneUn
+create table seObtieneUn
 	(numPedido				int check (numPedido > 0 and numPedido <= 999999999),
 	SKU						int not null check (SKU >= 0 and SKU <= 999999),
 	primary key (numPedido, SKU),
 	foreign key (numPedido) references pedidos(numPedido),
 	foreign key (SKU) references producto(SKU))
 
-	create table detalleProducto_facturas
+create table detalleProducto_facturas
 	(numFact				int not null check (numFact > 0 and numFact <= 99999999),
 	numPedido				int check (numPedido > 0 and numPedido <= 999999999),
 	SKU						int not null check (SKU >= 0 and SKU <= 999999),
@@ -120,7 +119,7 @@ create table personal
 	primary key (numFact, numPedido,SKU, unidFacturadas ),
 	foreign key (numFact) references facturas(numFact))
 
-	create table detalleProducto_pedidos
+create table detalleProducto_pedidos
 	(numPedido				int check (numPedido > 0 and numPedido <= 999999999),
 	cantPedido				int check (cantPedido > 0 and cantPedido <= 9999),
 	precioUnitVta			numeric(4,2),
@@ -130,7 +129,7 @@ create table personal
 	primary key (numPedido, cantPedido),
 	foreign key (numPedido) references pedidos(numPedido))
 
-	create table factura_ctaPorCobrar
+create table factura_ctaPorCobrar
 	(numFact				int not null check (numFact > 0 and numFact <= 99999999),
 	codigoCliente			int not null check (codigoCliente > 0 and codigoCliente <= 9999),
 	primary key (numFact, codigoCliente),
@@ -138,7 +137,7 @@ create table personal
 	foreign key (codigoCliente) references cliente (codigoCliente))
 
 	insert into producto  values
-	(1,'taladro', 100, 3500.50, 5,3955.90)
+	(1,'taladro', 100, 35, 5,39)
 
 	insert into condicionPago values	
 	('Pago a 8 dias'),
@@ -146,7 +145,18 @@ create table personal
 	('Pago a 45 dias'),
 	('Pago a 15 dias')
 
-	insert into ctaPorCobrar values
-	(1, 1, 23000, 1000, 13,'2013-03-11'),
-	(2, 22, 350000, 14500, 0.13,'2010-07-17'),
-	(44, 12, 60800, 60800, 13,'2016-01-09')
+insert into cliente values	
+	(1,'Jorge', 'Cartago', '1234','CR',87300510,'jor@gmail.com','2013-01-11',1234567, 'Cartago,','Pago a 15 dias')
+
+insert into facturas values
+	(1, '2013-03-11', 1, '2013-03-11','Cartago')
+
+insert into personal values
+	(1,'v1','Andres','Mora','Mata','2000-01-11',26891271,'CartagoCR','jorgmail.com',null,'2009-01-11','2012-01-11'),
+	(2,'v2','pato','Mora','Mata','2000-01-11',12345,'CartagoCR','cosa@gmail.com',1,'2009-01-11','2012-01-11')
+
+insert into pedidos values
+	(1, 1, 1, '2013-03-11', '2013-04-11', 1,'activo','nose')
+
+insert into ctaPorCobrar values
+	(1, 1, 23000, 1000, 13,'2013-03-11')

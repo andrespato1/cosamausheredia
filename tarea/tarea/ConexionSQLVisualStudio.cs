@@ -20,8 +20,8 @@ namespace tarea
          * inicializa la clase que conecta con sql server
          * con el string de la conexion
          */
-        public ConexionSQLVisualStudio(string stringConexion) {
-            conexionBaseDatos = new SqlConnection(stringConexion);
+        public ConexionSQLVisualStudio() {
+            conexionBaseDatos = new SqlConnection(@"Data Source = PATO\ANDRESSERVER; Initial Catalog = sistemaDeVentas; Integrated Security = True");
         }
 
         /*
