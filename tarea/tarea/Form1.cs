@@ -28,5 +28,10 @@ namespace tarea
             CorreoElectronico a = new CorreoElectronico();
             a.enviarFacturacionPorCorreoElectronico("TrabajosUniversitariosTEC@gmail.com", "C:\\Users\\andres\\Desktop\\JorgeMoraComuTecnica.pdf");
         }
+
+        private void BtnReporte_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

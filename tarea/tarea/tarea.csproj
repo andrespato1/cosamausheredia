@@ -36,6 +36,8 @@
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="MigraDoc.DocumentObjectModel">
       <HintPath>.\MigraDoc.DocumentObjectModel.dll</HintPath>
     </Reference>
@@ -53,6 +55,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -75,6 +78,23 @@
     <Compile Include="ConexionSQLVisualStudio.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReporteClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteClientes.Designer.cs">
+      <DependentUpon>ReporteClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeleccionDeReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeleccionDeReportes.Designer.cs">
+      <DependentUpon>SeleccionDeReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sistemaDeVentasDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sistemaDeVentasDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="VentanaClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +132,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ReporteClientes.rdlc" />
+    <EmbeddedResource Include="ReporteClientes.resx">
+      <DependentUpon>ReporteClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeleccionDeReportes.resx">
+      <DependentUpon>SeleccionDeReportes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanaClientes.resx">
       <DependentUpon>VentanaClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,6 +159,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="sistemaDeVentasDataSet.xsc">
+      <DependentUpon>sistemaDeVentasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sistemaDeVentasDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sistemaDeVentasDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sistemaDeVentasDataSet.xss">
+      <DependentUpon>sistemaDeVentasDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
