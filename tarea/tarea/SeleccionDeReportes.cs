@@ -16,5 +16,14 @@ namespace tarea
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        { ReporteClientes Rcliente = new ReporteClientes();
+            if (SeleccionReporte.Text == "Reporte de Clientes") {
+
+                Rcliente.Show();
+                this.Close();
+            }
+        }
     }
 }

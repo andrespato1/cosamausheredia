@@ -71,6 +71,7 @@
             this.BtnPedido.TabIndex = 4;
             this.BtnPedido.Text = "Pedidos";
             this.BtnPedido.UseVisualStyleBackColor = true;
+            this.BtnPedido.Click += new System.EventHandler(this.BtnPedido_Click);
             // 
             // BtnReporte
             // 

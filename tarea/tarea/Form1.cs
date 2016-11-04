@@ -31,6 +31,15 @@ namespace tarea
 
         private void BtnReporte_Click(object sender, EventArgs e)
         {
+            SeleccionDeReportes Reportar = new SeleccionDeReportes();
+            Reportar.Show();
+            this.Close();
+
+            
+        }
+
+        private void BtnPedido_Click(object sender, EventArgs e)
+        {
 
         }
     }
