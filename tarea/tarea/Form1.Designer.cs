@@ -44,6 +44,7 @@
             this.BtnProducto.TabIndex = 0;
             this.BtnProducto.Text = "Productos";
             this.BtnProducto.UseVisualStyleBackColor = true;
+            this.BtnProducto.Click += new System.EventHandler(this.BtnProducto_Click);
             // 
             // BtnCliente
             // 
@@ -53,6 +54,7 @@
             this.BtnCliente.TabIndex = 1;
             this.BtnCliente.Text = "Clientes";
             this.BtnCliente.UseVisualStyleBackColor = true;
+            this.BtnCliente.Click += new System.EventHandler(this.BtnCliente_Click);
             // 
             // BtnPersonal
             // 
@@ -62,6 +64,7 @@
             this.BtnPersonal.TabIndex = 2;
             this.BtnPersonal.Text = "Personal";
             this.BtnPersonal.UseVisualStyleBackColor = true;
+            this.BtnPersonal.Click += new System.EventHandler(this.BtnPersonal_Click);
             // 
             // BtnPedido
             // 

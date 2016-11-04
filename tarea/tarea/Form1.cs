@@ -42,5 +42,26 @@ namespace tarea
         {
 
         }
+
+        private void BtnPersonal_Click(object sender, EventArgs e)
+        {
+            VentanaPersonal vtnPersonal = new VentanaPersonal();
+            vtnPersonal.Show();
+            Hide();
+        }
+
+        private void BtnCliente_Click(object sender, EventArgs e)
+        {
+            VentanaClientes vtnClientes = new VentanaClientes();
+            vtnClientes.Show();
+            Hide();
+        }
+
+        private void BtnProducto_Click(object sender, EventArgs e)
+        {
+            VentanaProductos vtnProductos = new VentanaProductos();
+            vtnProductos.Show();
+            Hide();
+        }
     }
 }
