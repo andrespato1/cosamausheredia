@@ -21,7 +21,7 @@ namespace tarea
          * con el string de la conexion
          */
         public ConexionSQLVisualStudio() {
-            conexionBaseDatos = new SqlConnection(@"Data Source = PATO\ANDRESSERVER; Initial Catalog = sistemaDeVentas; Integrated Security = True");
+            conexionBaseDatos = new SqlConnection(@"Data Source=ESTRADAJ\JOSESQLEXPRESS;Initial Catalog=sistemaDeVentas;Integrated Security=True");
         }
 
         /*
