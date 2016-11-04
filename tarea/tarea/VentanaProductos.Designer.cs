@@ -47,6 +47,7 @@
             this.CBAtributosProductos = new System.Windows.Forms.ComboBox();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnActualizar = new System.Windows.Forms.Button();
+            this.CheckBoxBusca = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -160,31 +161,39 @@
             // DataGridProductos
             // 
             this.DataGridProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridProductos.Location = new System.Drawing.Point(350, 49);
+            this.DataGridProductos.Location = new System.Drawing.Point(358, 81);
             this.DataGridProductos.Name = "DataGridProductos";
             this.DataGridProductos.Size = new System.Drawing.Size(433, 191);
             this.DataGridProductos.TabIndex = 13;
             // 
             // TxtBusquedaProductos
             // 
-            this.TxtBusquedaProductos.Location = new System.Drawing.Point(350, 19);
+            this.TxtBusquedaProductos.Location = new System.Drawing.Point(358, 51);
             this.TxtBusquedaProductos.Name = "TxtBusquedaProductos";
             this.TxtBusquedaProductos.Size = new System.Drawing.Size(189, 20);
             this.TxtBusquedaProductos.TabIndex = 14;
             // 
             // BtnBusquedaProductos
             // 
-            this.BtnBusquedaProductos.Location = new System.Drawing.Point(708, 16);
+            this.BtnBusquedaProductos.Location = new System.Drawing.Point(716, 48);
             this.BtnBusquedaProductos.Name = "BtnBusquedaProductos";
             this.BtnBusquedaProductos.Size = new System.Drawing.Size(75, 23);
             this.BtnBusquedaProductos.TabIndex = 15;
             this.BtnBusquedaProductos.Text = "Buscar";
             this.BtnBusquedaProductos.UseVisualStyleBackColor = true;
+            this.BtnBusquedaProductos.Click += new System.EventHandler(this.BtnBusquedaProductos_Click);
             // 
             // CBAtributosProductos
             // 
             this.CBAtributosProductos.FormattingEnabled = true;
-            this.CBAtributosProductos.Location = new System.Drawing.Point(545, 18);
+            this.CBAtributosProductos.Items.AddRange(new object[] {
+            "SKU",
+            "Descripcion",
+            "Unidades en Inventario",
+            "Costo unitario",
+            "Impuestos",
+            "Precio de venta unitario"});
+            this.CBAtributosProductos.Location = new System.Drawing.Point(553, 50);
             this.CBAtributosProductos.Name = "CBAtributosProductos";
             this.CBAtributosProductos.Size = new System.Drawing.Size(157, 21);
             this.CBAtributosProductos.TabIndex = 16;
@@ -207,11 +216,22 @@
             this.BtnActualizar.Text = "Actualizar";
             this.BtnActualizar.UseVisualStyleBackColor = true;
             // 
+            // CheckBoxBusca
+            // 
+            this.CheckBoxBusca.AutoSize = true;
+            this.CheckBoxBusca.Location = new System.Drawing.Point(358, 23);
+            this.CheckBoxBusca.Name = "CheckBoxBusca";
+            this.CheckBoxBusca.Size = new System.Drawing.Size(379, 17);
+            this.CheckBoxBusca.TabIndex = 20;
+            this.CheckBoxBusca.Text = "Desea que al realizar la busque se muestren todas las columnas de la tabla";
+            this.CheckBoxBusca.UseVisualStyleBackColor = true;
+            // 
             // VentanaProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 258);
+            this.ClientSize = new System.Drawing.Size(803, 284);
+            this.Controls.Add(this.CheckBoxBusca);
             this.Controls.Add(this.BtnActualizar);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.CBAtributosProductos);
@@ -233,6 +253,7 @@
             this.Controls.Add(this.BtnAgregarProducto);
             this.Name = "VentanaProductos";
             this.Text = "VentanaProductos";
+            this.Load += new System.EventHandler(this.VentanaProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -260,5 +281,6 @@
         private System.Windows.Forms.ComboBox CBAtributosProductos;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Button BtnActualizar;
+        private System.Windows.Forms.CheckBox CheckBoxBusca;
     }
 }

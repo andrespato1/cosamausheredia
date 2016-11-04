@@ -77,11 +77,35 @@ namespace tarea
             string selectQuery;
             if (condicion != "")
             {
-                selectQuery = "select " + columna + " from " + tabla + " were " + columna + "==" + condicion;
+                selectQuery = "select " + columna + " from " + tabla + " where " + columna + " = " + condicion;
             }
             else
             {
                 selectQuery = "select " + columna + " from " + tabla ;
+            }
+            SqlDataAdapter MiDataAdapter = new SqlDataAdapter(selectQuery, conexionBaseDatos);
+            MiDataAdapter.Fill(dataSet, columna);
+            ventana.DataSource = dataSet;
+            ventana.DataMember = columna;
+            cerrarConexion();
+        }
+
+        /*
+         * comando que realiza los select de la base de datos 
+         * desde c#
+         */
+        public void seleccionarValoresBaseDatosTodasLasTablas(DataGridView ventana, string tabla, string columna, string condicion)
+        {
+            abrirConexion();
+            System.Data.DataSet dataSet = new System.Data.DataSet();
+            string selectQuery;
+            if (condicion != "")
+            {
+                selectQuery = "select * from " + tabla + " where " + columna + " = " + condicion;
+            }
+            else
+            {
+                selectQuery = "select * from " + tabla;
             }
             SqlDataAdapter MiDataAdapter = new SqlDataAdapter(selectQuery, conexionBaseDatos);
             MiDataAdapter.Fill(dataSet, columna);
