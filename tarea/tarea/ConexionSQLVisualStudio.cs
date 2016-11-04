@@ -94,12 +94,13 @@ namespace tarea
          * comando que realiza los insert de la base de datos 
          * desde c#
          */
-        public void agregarValoresBaseDatos(string tabla, string columna, string atributo)
+        public void agregarValoresBaseDatos(string tabla, string datos)
         {
             abrirConexion();
-            string updateQuery = "INSERT INTO"+ tabla+"("+columna+") Values ("+atributo +")"; 
+            string updateQuery = "insert into " + tabla + " values (" + datos + ")";
             SqlCommand comandoEjecutar = new SqlCommand(updateQuery, conexionBaseDatos);
-            comandoEjecutar.ExecuteNonQuery();
+            //MessageBox.Show(updateQuery, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            int resultado = comandoEjecutar.ExecuteNonQuery();
             cerrarConexion();
         }
 
