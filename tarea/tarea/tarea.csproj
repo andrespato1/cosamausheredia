@@ -78,11 +78,47 @@
     <Compile Include="ConexionSQLVisualStudio.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReporteCatalogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteCatalogo.Designer.cs">
+      <DependentUpon>ReporteCatalogo.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReporteClientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ReporteClientes.Designer.cs">
       <DependentUpon>ReporteClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteCondicionesDePago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteCondicionesDePago.Designer.cs">
+      <DependentUpon>ReporteCondicionesDePago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteCtasXCobrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteCtasXCobrar.Designer.cs">
+      <DependentUpon>ReporteCtasXCobrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteFacturas.Designer.cs">
+      <DependentUpon>ReporteFacturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportePedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportePedido.Designer.cs">
+      <DependentUpon>ReportePedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportePersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportePersonal.Designer.cs">
+      <DependentUpon>ReportePersonal.cs</DependentUpon>
     </Compile>
     <Compile Include="SeleccionDeReportes.cs">
       <SubType>Form</SubType>
@@ -94,6 +130,46 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>sistemaDeVentasDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sistemaDeVentasDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sistemaDeVentasDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sistemaDeVentasDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sistemaDeVentasDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sistemaDeVentasDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sistemaDeVentasDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sistemaDeVentasDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sistemaDeVentasDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sistemaDeVentasDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sistemaDeVentasDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sistemaDeVentasDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sistemaDeVentasDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sistemaDeVentasDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sistemaDeVentasDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sistemaDeVentasDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sistemaDeVentasDataSet8.xsd</DependentUpon>
     </Compile>
     <Compile Include="VentanaClientes.cs">
       <SubType>Form</SubType>
@@ -131,9 +207,33 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ReporteClientes.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="ReporteCtasXCobrar.rdlc" />
+    <EmbeddedResource Include="ReporteCtasXCobrar.resx">
+      <DependentUpon>ReporteCtasXCobrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteFacturas.rdlc" />
+    <EmbeddedResource Include="ReporteCatalogo.rdlc" />
+    <EmbeddedResource Include="ReportClientes.rdlc" />
+    <EmbeddedResource Include="ReporteCatalogo.resx">
+      <DependentUpon>ReporteCatalogo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReporteClientes.resx">
       <DependentUpon>ReporteClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteCondicionesDePago.resx">
+      <DependentUpon>ReporteCondicionesDePago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteFacturas.resx">
+      <DependentUpon>ReporteFacturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportePedido.resx">
+      <DependentUpon>ReportePedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportePedidos.rdlc" />
+    <EmbeddedResource Include="ReportePersonal.rdlc" />
+    <EmbeddedResource Include="ReportePersonal.resx">
+      <DependentUpon>ReportePersonal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SeleccionDeReportes.resx">
       <DependentUpon>SeleccionDeReportes.cs</DependentUpon>
@@ -169,6 +269,94 @@
     </None>
     <None Include="sistemaDeVentasDataSet.xss">
       <DependentUpon>sistemaDeVentasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sistemaDeVentasDataSet1.xsc">
+      <DependentUpon>sistemaDeVentasDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="sistemaDeVentasDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sistemaDeVentasDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sistemaDeVentasDataSet1.xss">
+      <DependentUpon>sistemaDeVentasDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="sistemaDeVentasDataSet2.xsc">
+      <DependentUpon>sistemaDeVentasDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="sistemaDeVentasDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sistemaDeVentasDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sistemaDeVentasDataSet2.xss">
+      <DependentUpon>sistemaDeVentasDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="sistemaDeVentasDataSet3.xsc">
+      <DependentUpon>sistemaDeVentasDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="sistemaDeVentasDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sistemaDeVentasDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sistemaDeVentasDataSet3.xss">
+      <DependentUpon>sistemaDeVentasDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="sistemaDeVentasDataSet4.xsc">
+      <DependentUpon>sistemaDeVentasDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="sistemaDeVentasDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sistemaDeVentasDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sistemaDeVentasDataSet4.xss">
+      <DependentUpon>sistemaDeVentasDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="sistemaDeVentasDataSet5.xsc">
+      <DependentUpon>sistemaDeVentasDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="sistemaDeVentasDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sistemaDeVentasDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sistemaDeVentasDataSet5.xss">
+      <DependentUpon>sistemaDeVentasDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="sistemaDeVentasDataSet6.xsc">
+      <DependentUpon>sistemaDeVentasDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="sistemaDeVentasDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sistemaDeVentasDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sistemaDeVentasDataSet6.xss">
+      <DependentUpon>sistemaDeVentasDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="sistemaDeVentasDataSet7.xsc">
+      <DependentUpon>sistemaDeVentasDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="sistemaDeVentasDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sistemaDeVentasDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sistemaDeVentasDataSet7.xss">
+      <DependentUpon>sistemaDeVentasDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="sistemaDeVentasDataSet8.xsc">
+      <DependentUpon>sistemaDeVentasDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="sistemaDeVentasDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sistemaDeVentasDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sistemaDeVentasDataSet8.xss">
+      <DependentUpon>sistemaDeVentasDataSet8.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

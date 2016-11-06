@@ -33,7 +33,7 @@ namespace tarea
         {
             SeleccionDeReportes Reportar = new SeleccionDeReportes();
             Reportar.Show();
-            this.Close();
+        
 
             
         }

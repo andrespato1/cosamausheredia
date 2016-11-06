@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="sistemaDeVentasDataSet1" targetNamespace="http://tempuri.org/sistemaDeVentasDataSet1.xsd" xmlns:mstns="http://tempuri.org/sistemaDeVentasDataSet1.xsd" xmlns="http://tempuri.org/sistemaDeVentasDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="sistemaDeVentasConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sistemaDeVentasConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.tarea.Properties.Settings.GlobalReference.Default.sistemaDeVentasConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReporteClienteTableAdapter" GeneratorDataComponentClassName="ReporteClienteTableAdapter" Name="ReporteCliente" UserDataComponentName="ReporteClienteTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sistemaDeVentasConnectionString (Settings)" DbObjectName="sistemaDeVentas.dbo.ReporteCliente" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT nombre, codigoCliente, paisUbic, telefono, email, limiteCred, dirEntregaProd, nombreCondicion FROM dbo.ReporteCliente</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="codigoCliente" DataSetColumn="codigoCliente" />
+              <Mapping SourceColumn="paisUbic" DataSetColumn="paisUbic" />
+              <Mapping SourceColumn="telefono" DataSetColumn="telefono" />
+              <Mapping SourceColumn="email" DataSetColumn="email" />
+              <Mapping SourceColumn="limiteCred" DataSetColumn="limiteCred" />
+              <Mapping SourceColumn="dirEntregaProd" DataSetColumn="dirEntregaProd" />
+              <Mapping SourceColumn="nombreCondicion" DataSetColumn="nombreCondicion" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="sistemaDeVentasDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="sistemaDeVentasDataSet1" msprop:Generator_UserDSName="sistemaDeVentasDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReporteCliente" msprop:Generator_TableClassName="ReporteClienteDataTable" msprop:Generator_TableVarName="tableReporteCliente" msprop:Generator_TablePropName="ReporteCliente" msprop:Generator_RowDeletingName="ReporteClienteRowDeleting" msprop:Generator_RowChangingName="ReporteClienteRowChanging" msprop:Generator_RowEvHandlerName="ReporteClienteRowChangeEventHandler" msprop:Generator_RowDeletedName="ReporteClienteRowDeleted" msprop:Generator_UserTableName="ReporteCliente" msprop:Generator_RowChangedName="ReporteClienteRowChanged" msprop:Generator_RowEvArgName="ReporteClienteRowChangeEvent" msprop:Generator_RowClassName="ReporteClienteRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codigoCliente" msprop:Generator_ColumnVarNameInTable="columncodigoCliente" msprop:Generator_ColumnPropNameInRow="codigoCliente" msprop:Generator_ColumnPropNameInTable="codigoClienteColumn" msprop:Generator_UserColumnName="codigoCliente" type="xs:int" />
+              <xs:element name="paisUbic" msprop:Generator_ColumnVarNameInTable="columnpaisUbic" msprop:Generator_ColumnPropNameInRow="paisUbic" msprop:Generator_ColumnPropNameInTable="paisUbicColumn" msprop:Generator_UserColumnName="paisUbic" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="telefono" msprop:Generator_ColumnVarNameInTable="columntelefono" msprop:Generator_ColumnPropNameInRow="telefono" msprop:Generator_ColumnPropNameInTable="telefonoColumn" msprop:Generator_UserColumnName="telefono" type="xs:int" />
+              <xs:element name="email" msprop:Generator_ColumnVarNameInTable="columnemail" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_ColumnPropNameInTable="emailColumn" msprop:Generator_UserColumnName="email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="limiteCred" msprop:Generator_ColumnVarNameInTable="columnlimiteCred" msprop:Generator_ColumnPropNameInRow="limiteCred" msprop:Generator_ColumnPropNameInTable="limiteCredColumn" msprop:Generator_UserColumnName="limiteCred" type="xs:decimal" minOccurs="0" />
+              <xs:element name="dirEntregaProd" msprop:Generator_ColumnVarNameInTable="columndirEntregaProd" msprop:Generator_ColumnPropNameInRow="dirEntregaProd" msprop:Generator_ColumnPropNameInTable="dirEntregaProdColumn" msprop:Generator_UserColumnName="dirEntregaProd" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="180" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombreCondicion" msprop:Generator_ColumnVarNameInTable="columnnombreCondicion" msprop:Generator_ColumnPropNameInRow="nombreCondicion" msprop:Generator_ColumnPropNameInTable="nombreCondicionColumn" msprop:Generator_UserColumnName="nombreCondicion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ReporteCliente" />
+      <xs:field xpath="mstns:codigoCliente" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

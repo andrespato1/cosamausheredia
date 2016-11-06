@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="sistemaDeVentasDataSet8" targetNamespace="http://tempuri.org/sistemaDeVentasDataSet8.xsd" xmlns:mstns="http://tempuri.org/sistemaDeVentasDataSet8.xsd" xmlns="http://tempuri.org/sistemaDeVentasDataSet8.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="sistemaDeVentasConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sistemaDeVentasConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.tarea.Properties.Settings.GlobalReference.Default.sistemaDeVentasConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReportePersonalTableAdapter" GeneratorDataComponentClassName="ReportePersonalTableAdapter" Name="ReportePersonal" UserDataComponentName="ReportePersonalTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sistemaDeVentasConnectionString (Settings)" DbObjectName="sistemaDeVentas.dbo.ReportePersonal" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT IDPersonal, puestoTrab, nombre, apellido1, apellido2, email, telefono FROM dbo.ReportePersonal</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IDPersonal" DataSetColumn="IDPersonal" />
+              <Mapping SourceColumn="puestoTrab" DataSetColumn="puestoTrab" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="apellido1" DataSetColumn="apellido1" />
+              <Mapping SourceColumn="apellido2" DataSetColumn="apellido2" />
+              <Mapping SourceColumn="email" DataSetColumn="email" />
+              <Mapping SourceColumn="telefono" DataSetColumn="telefono" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="sistemaDeVentasDataSet8" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="sistemaDeVentasDataSet8" msprop:Generator_UserDSName="sistemaDeVentasDataSet8">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReportePersonal" msprop:Generator_TableClassName="ReportePersonalDataTable" msprop:Generator_TableVarName="tableReportePersonal" msprop:Generator_TablePropName="ReportePersonal" msprop:Generator_RowDeletingName="ReportePersonalRowDeleting" msprop:Generator_RowChangingName="ReportePersonalRowChanging" msprop:Generator_RowEvHandlerName="ReportePersonalRowChangeEventHandler" msprop:Generator_RowDeletedName="ReportePersonalRowDeleted" msprop:Generator_UserTableName="ReportePersonal" msprop:Generator_RowChangedName="ReportePersonalRowChanged" msprop:Generator_RowEvArgName="ReportePersonalRowChangeEvent" msprop:Generator_RowClassName="ReportePersonalRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDPersonal" msprop:Generator_ColumnVarNameInTable="columnIDPersonal" msprop:Generator_ColumnPropNameInRow="IDPersonal" msprop:Generator_ColumnPropNameInTable="IDPersonalColumn" msprop:Generator_UserColumnName="IDPersonal" type="xs:int" />
+              <xs:element name="puestoTrab" msprop:Generator_ColumnVarNameInTable="columnpuestoTrab" msprop:Generator_ColumnPropNameInRow="puestoTrab" msprop:Generator_ColumnPropNameInTable="puestoTrabColumn" msprop:Generator_UserColumnName="puestoTrab" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="apellido1" msprop:Generator_ColumnVarNameInTable="columnapellido1" msprop:Generator_ColumnPropNameInRow="apellido1" msprop:Generator_ColumnPropNameInTable="apellido1Column" msprop:Generator_UserColumnName="apellido1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="apellido2" msprop:Generator_ColumnVarNameInTable="columnapellido2" msprop:Generator_ColumnPropNameInRow="apellido2" msprop:Generator_ColumnPropNameInTable="apellido2Column" msprop:Generator_UserColumnName="apellido2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="email" msprop:Generator_ColumnVarNameInTable="columnemail" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_ColumnPropNameInTable="emailColumn" msprop:Generator_UserColumnName="email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="telefono" msprop:Generator_ColumnVarNameInTable="columntelefono" msprop:Generator_ColumnPropNameInRow="telefono" msprop:Generator_ColumnPropNameInTable="telefonoColumn" msprop:Generator_UserColumnName="telefono" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ReportePersonal" />
+      <xs:field xpath="mstns:IDPersonal" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

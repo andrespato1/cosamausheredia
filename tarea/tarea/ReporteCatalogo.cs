@@ -10,19 +10,17 @@ using System.Windows.Forms;
 
 namespace tarea
 {
-    public partial class ReporteClientes : Form
+    public partial class ReporteCatalogo : Form
     {
-        public ReporteClientes()
+        public ReporteCatalogo()
         {
             InitializeComponent();
         }
 
-        private void ReporteClientes_Load(object sender, EventArgs e)
+        private void ReporteCatalogo_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'sistemaDeVentasDataSet3.CatProducto' table. You can move, or remove it, as needed.
             this.CatProductoTableAdapter.Fill(this.sistemaDeVentasDataSet3.CatProducto);
-            // TODO: This line of code loads data into the 'sistemaDeVentasDataSet.ReporteCliente' table. You can move, or remove it, as needed.
-            this.ReporteClienteTableAdapter.Fill(this.sistemaDeVentasDataSet.ReporteCliente);
 
             this.reportViewer1.RefreshReport();
         }

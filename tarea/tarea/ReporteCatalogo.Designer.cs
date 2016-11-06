@@ -1,6 +1,6 @@
 ﻿namespace tarea
 {
-    partial class ReporteClientes
+    partial class ReporteCatalogo
     {
         /// <summary>
         /// Required designer variable.
@@ -30,51 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.ReporteClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sistemaDeVentasDataSet = new tarea.sistemaDeVentasDataSet();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.ReporteClienteTableAdapter = new tarea.sistemaDeVentasDataSetTableAdapters.ReporteClienteTableAdapter();
-            this.sistemaDeVentasDataSet1 = new tarea.sistemaDeVentasDataSet1();
             this.sistemaDeVentasDataSet3 = new tarea.sistemaDeVentasDataSet3();
             this.CatProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.CatProductoTableAdapter = new tarea.sistemaDeVentasDataSet3TableAdapters.CatProductoTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.ReporteClienteBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sistemaDeVentasDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sistemaDeVentasDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sistemaDeVentasDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CatProductoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // ReporteClienteBindingSource
-            // 
-            this.ReporteClienteBindingSource.DataMember = "ReporteCliente";
-            this.ReporteClienteBindingSource.DataSource = this.sistemaDeVentasDataSet;
-            // 
-            // sistemaDeVentasDataSet
-            // 
-            this.sistemaDeVentasDataSet.DataSetName = "sistemaDeVentasDataSet";
-            this.sistemaDeVentasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "Reporte1";
-            reportDataSource1.Value = this.ReporteClienteBindingSource;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.CatProductoBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "tarea.ReportClientes.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "tarea.ReporteCatalogo.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(647, 324);
+            this.reportViewer1.Size = new System.Drawing.Size(711, 343);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // ReporteClienteTableAdapter
-            // 
-            this.ReporteClienteTableAdapter.ClearBeforeFill = true;
-            // 
-            // sistemaDeVentasDataSet1
-            // 
-            this.sistemaDeVentasDataSet1.DataSetName = "sistemaDeVentasDataSet1";
-            this.sistemaDeVentasDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // sistemaDeVentasDataSet3
             // 
@@ -90,18 +64,15 @@
             // 
             this.CatProductoTableAdapter.ClearBeforeFill = true;
             // 
-            // ReporteClientes
+            // ReporteCatalogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(647, 324);
+            this.ClientSize = new System.Drawing.Size(711, 343);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "ReporteClientes";
-            this.Text = "ReporteClientes";
-            this.Load += new System.EventHandler(this.ReporteClientes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ReporteClienteBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sistemaDeVentasDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sistemaDeVentasDataSet1)).EndInit();
+            this.Name = "ReporteCatalogo";
+            this.Text = "ReporteCatalogo";
+            this.Load += new System.EventHandler(this.ReporteCatalogo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sistemaDeVentasDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CatProductoBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -111,10 +82,6 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource ReporteClienteBindingSource;
-        private sistemaDeVentasDataSet sistemaDeVentasDataSet;
-        private sistemaDeVentasDataSetTableAdapters.ReporteClienteTableAdapter ReporteClienteTableAdapter;
-        private sistemaDeVentasDataSet1 sistemaDeVentasDataSet1;
         private System.Windows.Forms.BindingSource CatProductoBindingSource;
         private sistemaDeVentasDataSet3 sistemaDeVentasDataSet3;
         private sistemaDeVentasDataSet3TableAdapters.CatProductoTableAdapter CatProductoTableAdapter;

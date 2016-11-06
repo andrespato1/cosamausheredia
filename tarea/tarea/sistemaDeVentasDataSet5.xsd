@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="sistemaDeVentasDataSet5" targetNamespace="http://tempuri.org/sistemaDeVentasDataSet5.xsd" xmlns:mstns="http://tempuri.org/sistemaDeVentasDataSet5.xsd" xmlns="http://tempuri.org/sistemaDeVentasDataSet5.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="sistemaDeVentasConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="sistemaDeVentasConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.tarea.Properties.Settings.GlobalReference.Default.sistemaDeVentasConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReporteFacturasTableAdapter" GeneratorDataComponentClassName="ReporteFacturasTableAdapter" Name="ReporteFacturas" UserDataComponentName="ReporteFacturasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="sistemaDeVentasConnectionString (Settings)" DbObjectName="sistemaDeVentas.dbo.ReporteFacturas" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT numFact, numPedido, SKU, descripcion, unidFacturadas, precioUnitVta, subtotal, descuento, impTotal, precioTotal FROM dbo.ReporteFacturas</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="numFact" DataSetColumn="numFact" />
+              <Mapping SourceColumn="numPedido" DataSetColumn="numPedido" />
+              <Mapping SourceColumn="SKU" DataSetColumn="SKU" />
+              <Mapping SourceColumn="descripcion" DataSetColumn="descripcion" />
+              <Mapping SourceColumn="unidFacturadas" DataSetColumn="unidFacturadas" />
+              <Mapping SourceColumn="precioUnitVta" DataSetColumn="precioUnitVta" />
+              <Mapping SourceColumn="subtotal" DataSetColumn="subtotal" />
+              <Mapping SourceColumn="descuento" DataSetColumn="descuento" />
+              <Mapping SourceColumn="impTotal" DataSetColumn="impTotal" />
+              <Mapping SourceColumn="precioTotal" DataSetColumn="precioTotal" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="sistemaDeVentasDataSet5" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="sistemaDeVentasDataSet5" msprop:Generator_UserDSName="sistemaDeVentasDataSet5">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReporteFacturas" msprop:Generator_TableClassName="ReporteFacturasDataTable" msprop:Generator_TableVarName="tableReporteFacturas" msprop:Generator_TablePropName="ReporteFacturas" msprop:Generator_RowDeletingName="ReporteFacturasRowDeleting" msprop:Generator_RowChangingName="ReporteFacturasRowChanging" msprop:Generator_RowEvHandlerName="ReporteFacturasRowChangeEventHandler" msprop:Generator_RowDeletedName="ReporteFacturasRowDeleted" msprop:Generator_UserTableName="ReporteFacturas" msprop:Generator_RowChangedName="ReporteFacturasRowChanged" msprop:Generator_RowEvArgName="ReporteFacturasRowChangeEvent" msprop:Generator_RowClassName="ReporteFacturasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="numFact" msprop:Generator_ColumnVarNameInTable="columnnumFact" msprop:Generator_ColumnPropNameInRow="numFact" msprop:Generator_ColumnPropNameInTable="numFactColumn" msprop:Generator_UserColumnName="numFact" type="xs:int" />
+              <xs:element name="numPedido" msprop:Generator_ColumnVarNameInTable="columnnumPedido" msprop:Generator_ColumnPropNameInRow="numPedido" msprop:Generator_ColumnPropNameInTable="numPedidoColumn" msprop:Generator_UserColumnName="numPedido" type="xs:int" />
+              <xs:element name="SKU" msprop:Generator_ColumnVarNameInTable="columnSKU" msprop:Generator_ColumnPropNameInRow="SKU" msprop:Generator_ColumnPropNameInTable="SKUColumn" msprop:Generator_UserColumnName="SKU" type="xs:int" />
+              <xs:element name="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_UserColumnName="descripcion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="unidFacturadas" msprop:Generator_ColumnVarNameInTable="columnunidFacturadas" msprop:Generator_ColumnPropNameInRow="unidFacturadas" msprop:Generator_ColumnPropNameInTable="unidFacturadasColumn" msprop:Generator_UserColumnName="unidFacturadas" type="xs:int" />
+              <xs:element name="precioUnitVta" msprop:Generator_ColumnVarNameInTable="columnprecioUnitVta" msprop:Generator_ColumnPropNameInRow="precioUnitVta" msprop:Generator_ColumnPropNameInTable="precioUnitVtaColumn" msprop:Generator_UserColumnName="precioUnitVta" type="xs:decimal" minOccurs="0" />
+              <xs:element name="subtotal" msprop:Generator_ColumnVarNameInTable="columnsubtotal" msprop:Generator_ColumnPropNameInRow="subtotal" msprop:Generator_ColumnPropNameInTable="subtotalColumn" msprop:Generator_UserColumnName="subtotal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="descuento" msprop:Generator_ColumnVarNameInTable="columndescuento" msprop:Generator_ColumnPropNameInRow="descuento" msprop:Generator_ColumnPropNameInTable="descuentoColumn" msprop:Generator_UserColumnName="descuento" type="xs:decimal" minOccurs="0" />
+              <xs:element name="impTotal" msprop:Generator_ColumnVarNameInTable="columnimpTotal" msprop:Generator_ColumnPropNameInRow="impTotal" msprop:Generator_ColumnPropNameInTable="impTotalColumn" msprop:Generator_UserColumnName="impTotal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="precioTotal" msprop:Generator_ColumnVarNameInTable="columnprecioTotal" msprop:Generator_ColumnPropNameInRow="precioTotal" msprop:Generator_ColumnPropNameInTable="precioTotalColumn" msprop:Generator_UserColumnName="precioTotal" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ReporteFacturas" />
+      <xs:field xpath="mstns:numFact" />
+      <xs:field xpath="mstns:numPedido" />
+      <xs:field xpath="mstns:SKU" />
+      <xs:field xpath="mstns:unidFacturadas" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
