@@ -21,7 +21,7 @@ namespace tarea
          * con el string de la conexion
          */
         public ConexionSQLVisualStudio() {
-            conexionBaseDatos = new SqlConnection(@"Data Source=ESTRADAJ\JOSESQLEXPRESS;Initial Catalog=sistemaDeVentas;Integrated Security=True");
+            conexionBaseDatos = new SqlConnection(@"Data Source=PATO\ANDRESSERVER;Initial Catalog=sistemaDeVentas;Integrated Security=True");
         }
 
         /*
@@ -77,7 +77,7 @@ namespace tarea
             string selectQuery;
             if (condicion != "")
             {
-                selectQuery = "select " + columna + " from " + tabla + " were " + columna + "==" + condicion;
+                selectQuery = "select " + columna + " from " + tabla + " where " + columna + " = " + condicion;
             }
             else
             {
@@ -91,15 +91,40 @@ namespace tarea
         }
 
         /*
+         * comando que realiza los select de la base de datos 
+         * desde c#
+         */
+        public void seleccionarValoresBaseDatosTodasLasTablas(DataGridView ventana, string tabla, string columna, string condicion)
+        {
+            abrirConexion();
+            System.Data.DataSet dataSet = new System.Data.DataSet();
+            string selectQuery;
+            if (condicion != "")
+            {
+                selectQuery = "select * from " + tabla + " where " + columna + " = " + condicion;
+            }
+            else
+            {
+                selectQuery = "select * from " + tabla;
+            }
+            SqlDataAdapter MiDataAdapter = new SqlDataAdapter(selectQuery, conexionBaseDatos);
+            MiDataAdapter.Fill(dataSet, columna);
+            ventana.DataSource = dataSet;
+            ventana.DataMember = columna;
+            cerrarConexion();
+        }
+
+        /*
          * comando que realiza los insert de la base de datos 
          * desde c#
          */
-        public void agregarValoresBaseDatos(string tabla, string columna, string atributo)
+        public void agregarValoresBaseDatos(string tabla, string datos)
         {
             abrirConexion();
-            string updateQuery = "INSERT INTO"+ tabla+"("+columna+") Values ("+atributo +")"; 
+            string updateQuery = "insert into " + tabla + " values (" + datos + ")";
             SqlCommand comandoEjecutar = new SqlCommand(updateQuery, conexionBaseDatos);
-            comandoEjecutar.ExecuteNonQuery();
+            //MessageBox.Show(updateQuery, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            int resultado = comandoEjecutar.ExecuteNonQuery();
             cerrarConexion();
         }
 
