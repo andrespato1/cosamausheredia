@@ -40,7 +40,9 @@ namespace tarea
 
         private void BtnPedido_Click(object sender, EventArgs e)
         {
-
+            VentanaPedidos pedidonuevo = new VentanaPedidos();
+            pedidonuevo.Show();
+            Hide();
         }
 
         private void BtnPersonal_Click(object sender, EventArgs e)
@@ -94,6 +96,13 @@ namespace tarea
         private void BtnCtaCobrar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void botonRegistrarPedido_Click(object sender, EventArgs e)
+        {
+            VentanaRevisarPedido pedidorevisar = new VentanaRevisarPedido();
+            pedidorevisar.Show();
+            Hide();
         }
     }
 }

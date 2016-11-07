@@ -130,6 +130,7 @@
             this.botonRegistrarPedido.TabIndex = 11;
             this.botonRegistrarPedido.Text = "Revisar pedido";
             this.botonRegistrarPedido.UseVisualStyleBackColor = true;
+            this.botonRegistrarPedido.Click += new System.EventHandler(this.botonRegistrarPedido_Click);
             // 
             // botonConfirmarPedido
             // 
