@@ -160,5 +160,12 @@ namespace tarea
             TxtFechaIngreso.Text = "";
             TxtFechaRetiro.Text = "";
         }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarPersonal vtanaEliminarPersonal = new EliminarPersonal();
+            vtanaEliminarPersonal.Show();
+            Hide();
+        }
     }
 }

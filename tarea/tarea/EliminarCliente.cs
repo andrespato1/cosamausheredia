@@ -35,5 +35,12 @@ namespace tarea
             baseDatos.seleccionarValoresBaseDatos(DataGridEliminarCliente, nombreTabla, "*", "");
             TxtEliminarCliente.Text = "";
         }
+
+        private void BtnAtras_Click(object sender, EventArgs e)
+        {
+            VentanaClientes vtnaClienta = new VentanaClientes();
+            vtnaClienta.Show();
+            Hide();
+        }
     }
 }

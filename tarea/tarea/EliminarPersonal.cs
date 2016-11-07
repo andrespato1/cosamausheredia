@@ -32,14 +32,9 @@ namespace tarea
 
         private void BtnEliminarPersonal_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void BtnAtras_Click(object sender, EventArgs e)
-        {
             string queryActualizar = "update personal set puestoTrab = null";
             baseDatos.actualizarValoresBaseDatos(queryActualizar, "IDPersonal", TxtIDEliminar.Text);
-            queryActualizar = "update personal set fechaRetiro = '" + TxtFechaRetiro.Text+ "'";
+            queryActualizar = "update personal set fechaRetiro = '" + TxtFechaRetiro.Text + "'";
             baseDatos.actualizarValoresBaseDatos(queryActualizar, "IDPersonal", TxtIDEliminar.Text);
             queryActualizar = "update personal set IDJefe = " + TxtEncargado.Text;
             baseDatos.actualizarValoresBaseDatos(queryActualizar, "IDJefe", TxtIDEliminar.Text);
@@ -48,6 +43,14 @@ namespace tarea
             TxtEncargado.Text = "";
             TxtIDEliminar.Text = "";
             TxtFechaRetiro.Text = "";
+
+        }
+
+        private void BtnAtras_Click(object sender, EventArgs e)
+        {
+            VentanaPersonal vtnPersonal = new VentanaPersonal();
+            vtnPersonal.Show();
+            Hide();
         }
     }
 }
