@@ -27,7 +27,11 @@ namespace tarea
 
         private void BtnEliminarCliente_Click(object sender, EventArgs e)
         {
-            baseDatos.eliminarValoresBaseDatos(nombreTabla, "codigoCliente", TxtEliminarCliente.Text);
+            string queryActualizar = "update cliente set fechaInicioR = null";
+            baseDatos.actualizarValoresBaseDatos(queryActualizar, "codigoCliente", TxtEliminarCliente.Text);
+            queryActualizar = "update cliente set limiteCred = null";
+            baseDatos.actualizarValoresBaseDatos(queryActualizar, "codigoCliente", TxtEliminarCliente.Text);
+
             baseDatos.seleccionarValoresBaseDatos(DataGridEliminarCliente, nombreTabla, "*", "");
             TxtEliminarCliente.Text = "";
         }
