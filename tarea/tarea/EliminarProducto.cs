@@ -31,5 +31,12 @@ namespace tarea
             baseDatos.seleccionarValoresBaseDatos(DataGridEliminarProducto, nombreTabla, "*", "");
             TxtEliminarProducto.Text = "";
         }
+
+        private void BtnAtras_Click(object sender, EventArgs e)
+        {
+            VentanaProductos vtnProductos = new VentanaProductos();
+            vtnProductos.Show();
+            Hide();
+        }
     }
 }

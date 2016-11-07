@@ -32,6 +32,7 @@
             this.TxtEliminarProducto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.DataGridEliminarProducto = new System.Windows.Forms.DataGridView();
+            this.BtnAtras = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridEliminarProducto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,14 +67,25 @@
             this.DataGridEliminarProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridEliminarProducto.Location = new System.Drawing.Point(13, 53);
             this.DataGridEliminarProducto.Name = "DataGridEliminarProducto";
-            this.DataGridEliminarProducto.Size = new System.Drawing.Size(577, 196);
+            this.DataGridEliminarProducto.Size = new System.Drawing.Size(503, 196);
             this.DataGridEliminarProducto.TabIndex = 3;
+            // 
+            // BtnAtras
+            // 
+            this.BtnAtras.Location = new System.Drawing.Point(426, 12);
+            this.BtnAtras.Name = "BtnAtras";
+            this.BtnAtras.Size = new System.Drawing.Size(75, 23);
+            this.BtnAtras.TabIndex = 4;
+            this.BtnAtras.Text = "Atras";
+            this.BtnAtras.UseVisualStyleBackColor = true;
+            this.BtnAtras.Click += new System.EventHandler(this.BtnAtras_Click);
             // 
             // EliminarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(609, 261);
+            this.ClientSize = new System.Drawing.Size(524, 261);
+            this.Controls.Add(this.BtnAtras);
             this.Controls.Add(this.DataGridEliminarProducto);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtEliminarProducto);
@@ -93,5 +105,6 @@
         private System.Windows.Forms.TextBox TxtEliminarProducto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView DataGridEliminarProducto;
+        private System.Windows.Forms.Button BtnAtras;
     }
 }
