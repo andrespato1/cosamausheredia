@@ -38,5 +38,12 @@ namespace tarea
             principal.Show();
             Hide();
         }
+
+        private void btTramitarFactura_Click(object sender, EventArgs e)
+        {
+            VentanaFacturarPedidos factPedidos = new VentanaFacturarPedidos();
+            factPedidos.Show();
+            Hide();
+        }
     }
 }

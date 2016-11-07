@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace tarea
 {
-    public partial class VentanaCondicionPago : Form
+    public partial class VentanaCuentaCobrar : Form
     {
-        public VentanaCondicionPago()
+        public VentanaCuentaCobrar()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void botonAtras_Click(object sender, EventArgs e)
+        private void btnAtras_Click(object sender, EventArgs e)
         {
             Form1 principal = new Form1();
             principal.Show();

@@ -33,9 +33,8 @@ namespace tarea
         {
             SeleccionDeReportes Reportar = new SeleccionDeReportes();
             Reportar.Show();
-        
+            Hide();
 
-            
         }
 
         private void BtnPedido_Click(object sender, EventArgs e)
@@ -97,7 +96,9 @@ namespace tarea
 
         private void BtnCtaCobrar_Click(object sender, EventArgs e)
         {
-
+            VentanaCuentaCobrar ctaCobrar = new VentanaCuentaCobrar();
+            ctaCobrar.Show();
+            Hide();
         }
 
         private void botonRegistrarPedido_Click(object sender, EventArgs e)
