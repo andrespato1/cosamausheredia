@@ -148,5 +148,12 @@ namespace tarea
             }
             TxtBusquedaCliente.Text = "";
         }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarCliente vtnaEliminar = new tarea.EliminarCliente();
+            vtnaEliminar.Show();
+            Hide();
+        }
     }
 }

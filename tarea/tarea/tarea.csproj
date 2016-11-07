@@ -68,6 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CorreoElectronico.cs" />
+    <Compile Include="EliminarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarCliente.Designer.cs">
+      <DependentUpon>EliminarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="EliminarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +249,9 @@
     <Compile Include="VentanaRevisarPedido.Designer.cs">
       <DependentUpon>VentanaRevisarPedido.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="EliminarCliente.resx">
+      <DependentUpon>EliminarCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EliminarProducto.resx">
       <DependentUpon>EliminarProducto.cs</DependentUpon>
     </EmbeddedResource>
