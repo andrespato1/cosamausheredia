@@ -39,7 +39,17 @@ namespace tarea
             baseDatos.agregarValoresBaseDatos(nombreTabla, valores);
             baseDatos.seleccionarValoresBaseDatos(DataGridClientes, nombreTabla, "*", "");
 
-
+            TxtCodigoCliente.Text = "";
+            TxtNombre.Text = "";
+            TxtDireccion.Text = "";
+            TxtCodigoPostal.Text = "";
+            TxtUbicacion.Text = "";
+            TxtTelefono.Text = "";
+            TxtEmail.Text = "";
+            TxtFecha.Text = "";
+            TxtCredito.Text = "";
+            TxtEntrega.Text = "";
+            TxtCondicion.Text = "";
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
@@ -47,6 +57,96 @@ namespace tarea
             Form1 principal = new Form1();
             principal.Show();
             Hide();
+        }
+
+        private void VentanaClientes_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnActualizar_Click(object sender, EventArgs e)
+        {
+            string queryActualizar = "";
+            if (TxtCodigoCliente.Text != "")
+            {
+                if (TxtNombre.Text != "")
+                {
+                    queryActualizar = "update cliente set nombre = '" + TxtNombre.Text + "'";
+                    baseDatos.actualizarValoresBaseDatos(queryActualizar, "codigoCliente", TxtCodigoCliente.Text);
+                }
+                if (TxtDireccion.Text != "")
+                {
+                    queryActualizar = "update cliente set direccion = '" + TxtDireccion.Text + "'";
+                    baseDatos.actualizarValoresBaseDatos(queryActualizar, "codigoCliente", TxtCodigoCliente.Text);
+                }
+                if (TxtCodigoPostal.Text != "")
+                {
+                    queryActualizar = "update cliente set codigoPostal = '" + TxtCodigoPostal.Text + "'";
+                    baseDatos.actualizarValoresBaseDatos(queryActualizar, "codigoCliente", TxtCodigoCliente.Text);
+                }
+                if (TxtUbicacion.Text != "")
+                {
+                    queryActualizar = "update cliente set paisUbic = '" + TxtUbicacion.Text + "'";
+                    baseDatos.actualizarValoresBaseDatos(queryActualizar, "codigoCliente", TxtCodigoCliente.Text);
+                }
+                if (TxtTelefono.Text != "")
+                {
+                    queryActualizar = "update cliente set telefono = " + TxtTelefono.Text;
+                    baseDatos.actualizarValoresBaseDatos(queryActualizar, "codigoCliente", TxtCodigoCliente.Text);
+                }
+                if (TxtEmail.Text != "")
+                {
+                    queryActualizar = "update cliente set email = '" + TxtEmail.Text + "'";
+                    baseDatos.actualizarValoresBaseDatos(queryActualizar, "codigoCliente", TxtCodigoCliente.Text);
+                }
+                if (TxtFecha.Text != "")
+                {
+                    queryActualizar = "update cliente set fechaInicioR = '" + TxtFecha.Text + "'";
+                    baseDatos.actualizarValoresBaseDatos(queryActualizar, "codigoCliente", TxtCodigoCliente.Text);
+                }
+                if (TxtCredito.Text != "")
+                {
+                    queryActualizar = "update cliente set limiteCred = " + TxtCredito.Text;
+                    baseDatos.actualizarValoresBaseDatos(queryActualizar, "codigoCliente", TxtCodigoCliente.Text);
+                }
+                if (TxtEntrega.Text != "")
+                {
+                    queryActualizar = "update cliente set dirEntregaProd = '" + TxtEntrega.Text + "'";
+                    baseDatos.actualizarValoresBaseDatos(queryActualizar, "codigoCliente", TxtCodigoCliente.Text);
+                }
+                if (TxtFecha.Text != "")
+                {
+                    queryActualizar = "update cliente set fechaInicioR = '" + TxtFecha.Text + "'";
+                    baseDatos.actualizarValoresBaseDatos(queryActualizar, "codigoCliente", TxtCodigoCliente.Text);
+                }
+            }
+
+            baseDatos.seleccionarValoresBaseDatos(DataGridClientes, nombreTabla, "*", "");
+
+            TxtCodigoCliente.Text = "";
+            TxtNombre.Text = "";
+            TxtDireccion.Text = "";
+            TxtCodigoPostal.Text = "";
+            TxtUbicacion.Text = "";
+            TxtTelefono.Text = "";
+            TxtEmail.Text = "";
+            TxtFecha.Text = "";
+            TxtCredito.Text = "";
+            TxtEntrega.Text = "";
+            TxtCondicion.Text = "";
+        }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            if (checkBusquedaCliente.Checked == true)
+            {
+                baseDatos.seleccionarValoresBaseDatosTodasLasTablas(DataGridClientes, "cliente", CBBuscarCliente.Text, "like '" + TxtBusquedaCliente.Text + "%'");
+            }
+            else
+            {
+                baseDatos.seleccionarValoresBaseDatos(DataGridClientes, "cliente", CBBuscarCliente.Text, "like '" + TxtBusquedaCliente.Text + "%'");
+            }
+            TxtBusquedaCliente.Text = "";
         }
     }
 }
