@@ -183,6 +183,12 @@
     <Compile Include="VentanaClientes.Designer.cs">
       <DependentUpon>VentanaClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="VentanaCondicionPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaCondicionPago.Designer.cs">
+      <DependentUpon>VentanaCondicionPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanaConfirmarPedido.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -273,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaClientes.resx">
       <DependentUpon>VentanaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaCondicionPago.resx">
+      <DependentUpon>VentanaCondicionPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaConfirmarPedido.resx">
       <DependentUpon>VentanaConfirmarPedido.cs</DependentUpon>
