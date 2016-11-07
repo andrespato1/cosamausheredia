@@ -47,7 +47,7 @@ namespace tarea
         public void actualizarValoresBaseDatos(string query, string columna, string condicionWhere)
         {
             abrirConexion();
-            string updateQuery = query + " where " + columna + "=="  + condicionWhere;
+            string updateQuery = query + " where " + columna + "==" + condicionWhere;
             SqlCommand comandoEjecutar = new SqlCommand(updateQuery, conexionBaseDatos);
             comandoEjecutar.ExecuteNonQuery();
             cerrarConexion();
@@ -60,7 +60,7 @@ namespace tarea
         public void eliminarValoresBaseDatos(string tabla, string columna, string condicionWhere)
         {
             abrirConexion();
-            string deleteQuery = "delete from "+tabla + " where "+ columna +"==" + condicionWhere;
+            string deleteQuery = "delete from " + tabla + " where " + columna + "==" + condicionWhere;
             SqlCommand comandoEjecutar = new SqlCommand(deleteQuery, conexionBaseDatos);
             comandoEjecutar.ExecuteNonQuery();
             cerrarConexion();
@@ -81,7 +81,7 @@ namespace tarea
             }
             else
             {
-                selectQuery = "select " + columna + " from " + tabla ;
+                selectQuery = "select " + columna + " from " + tabla;
             }
             SqlDataAdapter MiDataAdapter = new SqlDataAdapter(selectQuery, conexionBaseDatos);
             MiDataAdapter.Fill(dataSet, columna);
@@ -101,7 +101,7 @@ namespace tarea
             string selectQuery;
             if (condicion != "")
             {
-                selectQuery = "select * from " + tabla + " where " + columna + " like " + condicion+"%'";
+                selectQuery = "select * from " + tabla + " where " + columna + " like " + condicion + "%'";
             }
             else
             {
@@ -130,3 +130,4 @@ namespace tarea
 
     }
 }
+
