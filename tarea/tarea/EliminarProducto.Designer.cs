@@ -31,8 +31,8 @@
             this.BtnEliminarProducto = new System.Windows.Forms.Button();
             this.TxtEliminarProducto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.DataGridEliminarProducto = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridEliminarProducto)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnEliminarProducto
@@ -43,6 +43,7 @@
             this.BtnEliminarProducto.TabIndex = 0;
             this.BtnEliminarProducto.Text = "Eliminar";
             this.BtnEliminarProducto.UseVisualStyleBackColor = true;
+            this.BtnEliminarProducto.Click += new System.EventHandler(this.BtnEliminarProducto_Click);
             // 
             // TxtEliminarProducto
             // 
@@ -60,26 +61,27 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Ingrese el SKU del producto a eliminar";
             // 
-            // dataGridView1
+            // DataGridEliminarProducto
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 53);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(577, 196);
-            this.dataGridView1.TabIndex = 3;
+            this.DataGridEliminarProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridEliminarProducto.Location = new System.Drawing.Point(13, 53);
+            this.DataGridEliminarProducto.Name = "DataGridEliminarProducto";
+            this.DataGridEliminarProducto.Size = new System.Drawing.Size(577, 196);
+            this.DataGridEliminarProducto.TabIndex = 3;
             // 
             // EliminarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(609, 261);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DataGridEliminarProducto);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtEliminarProducto);
             this.Controls.Add(this.BtnEliminarProducto);
             this.Name = "EliminarProducto";
             this.Text = "EliminarProducto";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.EliminarProducto_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridEliminarProducto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -90,6 +92,6 @@
         private System.Windows.Forms.Button BtnEliminarProducto;
         private System.Windows.Forms.TextBox TxtEliminarProducto;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DataGridEliminarProducto;
     }
 }
