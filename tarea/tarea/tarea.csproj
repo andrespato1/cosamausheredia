@@ -74,6 +74,12 @@
     <Compile Include="EliminarCliente.Designer.cs">
       <DependentUpon>EliminarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="EliminarPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarPersonal.Designer.cs">
+      <DependentUpon>EliminarPersonal.cs</DependentUpon>
+    </Compile>
     <Compile Include="EliminarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,6 +257,9 @@
     </Compile>
     <EmbeddedResource Include="EliminarCliente.resx">
       <DependentUpon>EliminarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarPersonal.resx">
+      <DependentUpon>EliminarPersonal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarProducto.resx">
       <DependentUpon>EliminarProducto.cs</DependentUpon>
