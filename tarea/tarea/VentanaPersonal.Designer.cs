@@ -53,13 +53,14 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.BtnAgregar = new System.Windows.Forms.Button();
-            this.BtnBuscar = new System.Windows.Forms.Button();
+            this.BtnBuscarPersonal = new System.Windows.Forms.Button();
             this.BtnActualizar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.DataGridPersonal = new System.Windows.Forms.DataGridView();
-            this.CBBuscar = new System.Windows.Forms.ComboBox();
-            this.TxtBuscar = new System.Windows.Forms.TextBox();
+            this.CBBuscarPersonal = new System.Windows.Forms.ComboBox();
+            this.TxtBuscarPersonal = new System.Windows.Forms.TextBox();
             this.botonAtras = new System.Windows.Forms.Button();
+            this.checkBusquedaPersonal = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridPersonal)).BeginInit();
             this.SuspendLayout();
             // 
@@ -265,14 +266,15 @@
             this.BtnAgregar.UseVisualStyleBackColor = true;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
-            // BtnBuscar
+            // BtnBuscarPersonal
             // 
-            this.BtnBuscar.Location = new System.Drawing.Point(799, 10);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.BtnBuscar.TabIndex = 25;
-            this.BtnBuscar.Text = "Buscar";
-            this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnBuscarPersonal.Location = new System.Drawing.Point(799, 57);
+            this.BtnBuscarPersonal.Name = "BtnBuscarPersonal";
+            this.BtnBuscarPersonal.Size = new System.Drawing.Size(75, 23);
+            this.BtnBuscarPersonal.TabIndex = 25;
+            this.BtnBuscarPersonal.Text = "Buscar";
+            this.BtnBuscarPersonal.UseVisualStyleBackColor = true;
+            this.BtnBuscarPersonal.Click += new System.EventHandler(this.BtnBuscarPersonal_Click);
             // 
             // BtnActualizar
             // 
@@ -282,6 +284,7 @@
             this.BtnActualizar.TabIndex = 26;
             this.BtnActualizar.Text = "Actualizar";
             this.BtnActualizar.UseVisualStyleBackColor = true;
+            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
             // BtnEliminar
             // 
@@ -291,29 +294,30 @@
             this.BtnEliminar.TabIndex = 27;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // DataGridPersonal
             // 
             this.DataGridPersonal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridPersonal.Location = new System.Drawing.Point(381, 39);
+            this.DataGridPersonal.Location = new System.Drawing.Point(381, 93);
             this.DataGridPersonal.Name = "DataGridPersonal";
             this.DataGridPersonal.Size = new System.Drawing.Size(493, 280);
             this.DataGridPersonal.TabIndex = 28;
             // 
-            // CBBuscar
+            // CBBuscarPersonal
             // 
-            this.CBBuscar.FormattingEnabled = true;
-            this.CBBuscar.Location = new System.Drawing.Point(624, 12);
-            this.CBBuscar.Name = "CBBuscar";
-            this.CBBuscar.Size = new System.Drawing.Size(169, 21);
-            this.CBBuscar.TabIndex = 29;
+            this.CBBuscarPersonal.FormattingEnabled = true;
+            this.CBBuscarPersonal.Location = new System.Drawing.Point(624, 59);
+            this.CBBuscarPersonal.Name = "CBBuscarPersonal";
+            this.CBBuscarPersonal.Size = new System.Drawing.Size(169, 21);
+            this.CBBuscarPersonal.TabIndex = 29;
             // 
-            // TxtBuscar
+            // TxtBuscarPersonal
             // 
-            this.TxtBuscar.Location = new System.Drawing.Point(381, 12);
-            this.TxtBuscar.Name = "TxtBuscar";
-            this.TxtBuscar.Size = new System.Drawing.Size(237, 20);
-            this.TxtBuscar.TabIndex = 30;
+            this.TxtBuscarPersonal.Location = new System.Drawing.Point(381, 59);
+            this.TxtBuscarPersonal.Name = "TxtBuscarPersonal";
+            this.TxtBuscarPersonal.Size = new System.Drawing.Size(237, 20);
+            this.TxtBuscarPersonal.TabIndex = 30;
             // 
             // botonAtras
             // 
@@ -325,18 +329,30 @@
             this.botonAtras.UseVisualStyleBackColor = true;
             this.botonAtras.Click += new System.EventHandler(this.botonAtras_Click);
             // 
+            // checkBusquedaPersonal
+            // 
+            this.checkBusquedaPersonal.AutoSize = true;
+            this.checkBusquedaPersonal.Location = new System.Drawing.Point(381, 27);
+            this.checkBusquedaPersonal.Name = "checkBusquedaPersonal";
+            this.checkBusquedaPersonal.Size = new System.Drawing.Size(244, 17);
+            this.checkBusquedaPersonal.TabIndex = 32;
+            this.checkBusquedaPersonal.Text = "Desea ver todas las columnas de la busqueda";
+            this.checkBusquedaPersonal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.checkBusquedaPersonal.UseVisualStyleBackColor = true;
+            // 
             // VentanaPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(886, 387);
+            this.Controls.Add(this.checkBusquedaPersonal);
             this.Controls.Add(this.botonAtras);
-            this.Controls.Add(this.TxtBuscar);
-            this.Controls.Add(this.CBBuscar);
+            this.Controls.Add(this.TxtBuscarPersonal);
+            this.Controls.Add(this.CBBuscarPersonal);
             this.Controls.Add(this.DataGridPersonal);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnActualizar);
-            this.Controls.Add(this.BtnBuscar);
+            this.Controls.Add(this.BtnBuscarPersonal);
             this.Controls.Add(this.BtnAgregar);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
@@ -364,6 +380,7 @@
             this.Controls.Add(this.TxtIDPersonal);
             this.Name = "VentanaPersonal";
             this.Text = "VentanaPersonal";
+            this.Load += new System.EventHandler(this.VentanaPersonal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridPersonal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -397,12 +414,13 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button BtnAgregar;
-        private System.Windows.Forms.Button BtnBuscar;
+        private System.Windows.Forms.Button BtnBuscarPersonal;
         private System.Windows.Forms.Button BtnActualizar;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.DataGridView DataGridPersonal;
-        private System.Windows.Forms.ComboBox CBBuscar;
-        private System.Windows.Forms.TextBox TxtBuscar;
+        private System.Windows.Forms.ComboBox CBBuscarPersonal;
+        private System.Windows.Forms.TextBox TxtBuscarPersonal;
         private System.Windows.Forms.Button botonAtras;
+        private System.Windows.Forms.CheckBox checkBusquedaPersonal;
     }
 }

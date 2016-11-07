@@ -38,7 +38,7 @@
             this.TxtUbicacion = new System.Windows.Forms.TextBox();
             this.TxtEntrega = new System.Windows.Forms.TextBox();
             this.TxtCondicion = new System.Windows.Forms.TextBox();
-            this.TxtBusqueda = new System.Windows.Forms.TextBox();
+            this.TxtBusquedaCliente = new System.Windows.Forms.TextBox();
             this.TxtCredito = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,9 +55,10 @@
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnActualizar = new System.Windows.Forms.Button();
-            this.BtnBuscar = new System.Windows.Forms.Button();
-            this.CBBuscar = new System.Windows.Forms.ComboBox();
+            this.BtnBuscarCliente = new System.Windows.Forms.Button();
+            this.CBBuscarCliente = new System.Windows.Forms.ComboBox();
             this.btnAtras = new System.Windows.Forms.Button();
+            this.checkBusquedaCliente = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,12 +132,12 @@
             this.TxtCondicion.Size = new System.Drawing.Size(100, 20);
             this.TxtCondicion.TabIndex = 10;
             // 
-            // TxtBusqueda
+            // TxtBusquedaCliente
             // 
-            this.TxtBusqueda.Location = new System.Drawing.Point(378, 12);
-            this.TxtBusqueda.Name = "TxtBusqueda";
-            this.TxtBusqueda.Size = new System.Drawing.Size(221, 20);
-            this.TxtBusqueda.TabIndex = 9;
+            this.TxtBusquedaCliente.Location = new System.Drawing.Point(378, 43);
+            this.TxtBusquedaCliente.Name = "TxtBusquedaCliente";
+            this.TxtBusquedaCliente.Size = new System.Drawing.Size(221, 20);
+            this.TxtBusquedaCliente.TabIndex = 9;
             // 
             // TxtCredito
             // 
@@ -247,9 +248,9 @@
             // DataGridClientes
             // 
             this.DataGridClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridClientes.Location = new System.Drawing.Point(378, 41);
+            this.DataGridClientes.Location = new System.Drawing.Point(378, 79);
             this.DataGridClientes.Name = "DataGridClientes";
-            this.DataGridClientes.Size = new System.Drawing.Size(498, 294);
+            this.DataGridClientes.Size = new System.Drawing.Size(498, 256);
             this.DataGridClientes.TabIndex = 23;
             // 
             // BtnAgregar
@@ -270,6 +271,7 @@
             this.BtnEliminar.TabIndex = 25;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnActualizar
             // 
@@ -279,23 +281,25 @@
             this.BtnActualizar.TabIndex = 26;
             this.BtnActualizar.Text = "Actualizar";
             this.BtnActualizar.UseVisualStyleBackColor = true;
+            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
-            // BtnBuscar
+            // BtnBuscarCliente
             // 
-            this.BtnBuscar.Location = new System.Drawing.Point(801, 10);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.BtnBuscar.TabIndex = 27;
-            this.BtnBuscar.Text = "Buscar";
-            this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnBuscarCliente.Location = new System.Drawing.Point(801, 41);
+            this.BtnBuscarCliente.Name = "BtnBuscarCliente";
+            this.BtnBuscarCliente.Size = new System.Drawing.Size(75, 23);
+            this.BtnBuscarCliente.TabIndex = 27;
+            this.BtnBuscarCliente.Text = "Buscar";
+            this.BtnBuscarCliente.UseVisualStyleBackColor = true;
+            this.BtnBuscarCliente.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
-            // CBBuscar
+            // CBBuscarCliente
             // 
-            this.CBBuscar.FormattingEnabled = true;
-            this.CBBuscar.Location = new System.Drawing.Point(605, 12);
-            this.CBBuscar.Name = "CBBuscar";
-            this.CBBuscar.Size = new System.Drawing.Size(190, 21);
-            this.CBBuscar.TabIndex = 28;
+            this.CBBuscarCliente.FormattingEnabled = true;
+            this.CBBuscarCliente.Location = new System.Drawing.Point(605, 43);
+            this.CBBuscarCliente.Name = "CBBuscarCliente";
+            this.CBBuscarCliente.Size = new System.Drawing.Size(190, 21);
+            this.CBBuscarCliente.TabIndex = 28;
             // 
             // btnAtras
             // 
@@ -307,14 +311,25 @@
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
+            // checkBusquedaCliente
+            // 
+            this.checkBusquedaCliente.AutoSize = true;
+            this.checkBusquedaCliente.Location = new System.Drawing.Point(378, 10);
+            this.checkBusquedaCliente.Name = "checkBusquedaCliente";
+            this.checkBusquedaCliente.Size = new System.Drawing.Size(272, 17);
+            this.checkBusquedaCliente.TabIndex = 30;
+            this.checkBusquedaCliente.Text = "Desea visualizar todas las columnas en la busqueda";
+            this.checkBusquedaCliente.UseVisualStyleBackColor = true;
+            // 
             // VentanaClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(888, 347);
+            this.Controls.Add(this.checkBusquedaCliente);
             this.Controls.Add(this.btnAtras);
-            this.Controls.Add(this.CBBuscar);
-            this.Controls.Add(this.BtnBuscar);
+            this.Controls.Add(this.CBBuscarCliente);
+            this.Controls.Add(this.BtnBuscarCliente);
             this.Controls.Add(this.BtnActualizar);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnAgregar);
@@ -332,7 +347,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtEntrega);
             this.Controls.Add(this.TxtCondicion);
-            this.Controls.Add(this.TxtBusqueda);
+            this.Controls.Add(this.TxtBusquedaCliente);
             this.Controls.Add(this.TxtCredito);
             this.Controls.Add(this.TxtTelefono);
             this.Controls.Add(this.TxtEmail);
@@ -344,6 +359,7 @@
             this.Controls.Add(this.TxtCodigoCliente);
             this.Name = "VentanaClientes";
             this.Text = "VentanaClientes";
+            this.Load += new System.EventHandler(this.VentanaClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -362,7 +378,7 @@
         private System.Windows.Forms.TextBox TxtUbicacion;
         private System.Windows.Forms.TextBox TxtEntrega;
         private System.Windows.Forms.TextBox TxtCondicion;
-        private System.Windows.Forms.TextBox TxtBusqueda;
+        private System.Windows.Forms.TextBox TxtBusquedaCliente;
         private System.Windows.Forms.TextBox TxtCredito;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -379,8 +395,9 @@
         private System.Windows.Forms.Button BtnAgregar;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Button BtnActualizar;
-        private System.Windows.Forms.Button BtnBuscar;
-        private System.Windows.Forms.ComboBox CBBuscar;
+        private System.Windows.Forms.Button BtnBuscarCliente;
+        private System.Windows.Forms.ComboBox CBBuscarCliente;
         private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.CheckBox checkBusquedaCliente;
     }
 }

@@ -117,5 +117,12 @@ namespace tarea
         {
 
         }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarProducto vtanaEliminarProducto = new EliminarProducto();
+            vtanaEliminarProducto.Show();
+            Hide();
+        }
     }
 }
