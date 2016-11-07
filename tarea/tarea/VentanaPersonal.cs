@@ -39,6 +39,19 @@ namespace tarea
 
             baseDatos.agregarValoresBaseDatos(nombreTabla, valores);
             baseDatos.seleccionarValoresBaseDatos(DataGridPersonal, nombreTabla, "*", "");
+
+            TxtIDPersonal.Text = "";
+            TxtPuesto.Text = "";
+            TxtNombre.Text = "";
+            TxtApellido1.Text = "";
+            TxtApellido2.Text = "";
+            TxtNacimiento.Text = "";
+            TxtTelefono.Text = "";
+            TxtResidencia.Text = "";
+            TxtEmail.Text = "";
+            TxtIDJefe.Text = "";
+            TxtFechaIngreso.Text = "";
+            TxtFechaRetiro.Text = "";
         }
 
         private void botonAtras_Click(object sender, EventArgs e)
@@ -46,6 +59,23 @@ namespace tarea
             Form1 principal = new Form1();
             principal.Show();
             Hide();
+        }
+
+        private void VentanaPersonal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnBuscarPersonal_Click(object sender, EventArgs e)
+        {
+            if (checkBusquedaPersonal.Checked == true)
+            {
+                baseDatos.seleccionarValoresBaseDatosTodasLasTablas(DataGridPersonal, "personal", CBBuscarPersonal.Text, "like '" + TxtBuscarPersonal.Text + "%'");
+            }
+            else
+            {
+                baseDatos.seleccionarValoresBaseDatos(DataGridPersonal, "personal", CBBuscarPersonal.Text, "like '" + TxtBuscarPersonal.Text + "%'");
+            }
         }
     }
 }
