@@ -54,11 +54,11 @@
             this.tb = new System.Windows.Forms.TextBox();
             this.botonAgregarProducto = new System.Windows.Forms.Button();
             this.botonRegistrarPedido = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridProdPedido = new System.Windows.Forms.DataGridView();
             this.label15 = new System.Windows.Forms.Label();
             this.botonAtras = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridPedidos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridProdPedido)).BeginInit();
             this.SuspendLayout();
             // 
             // DataGridPedidos
@@ -274,13 +274,13 @@
             this.botonRegistrarPedido.Text = "REGISTRAR PEDIDO";
             this.botonRegistrarPedido.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridProdPedido
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 281);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(312, 88);
-            this.dataGridView1.TabIndex = 34;
+            this.dataGridProdPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridProdPedido.Location = new System.Drawing.Point(15, 281);
+            this.dataGridProdPedido.Name = "dataGridProdPedido";
+            this.dataGridProdPedido.Size = new System.Drawing.Size(312, 88);
+            this.dataGridProdPedido.TabIndex = 34;
             // 
             // label15
             // 
@@ -308,7 +308,7 @@
             this.ClientSize = new System.Drawing.Size(650, 381);
             this.Controls.Add(this.botonAtras);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridProdPedido);
             this.Controls.Add(this.botonRegistrarPedido);
             this.Controls.Add(this.botonAgregarProducto);
             this.Controls.Add(this.tb);
@@ -339,7 +339,7 @@
             this.Text = "VentanaPedidos";
             this.Load += new System.EventHandler(this.VentanaPedidos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridPedidos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridProdPedido)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -373,7 +373,7 @@
         private System.Windows.Forms.TextBox tb;
         private System.Windows.Forms.Button botonAgregarProducto;
         private System.Windows.Forms.Button botonRegistrarPedido;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridProdPedido;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button botonAtras;
     }

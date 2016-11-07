@@ -12,9 +12,13 @@ namespace tarea
 {
     public partial class VentanaFacturas : Form
     {
+        ConexionSQLVisualStudio baseDatos = new ConexionSQLVisualStudio();
+        string nombreTabla = "pedidos";
+
         public VentanaFacturas()
         {
             InitializeComponent();
+            baseDatos.seleccionarValoresBaseDatos(dataGridFact, nombreTabla, "*", "");
         }
 
         private void VentanaFacturas_Load(object sender, EventArgs e)
@@ -44,6 +48,11 @@ namespace tarea
             VentanaFacturarPedidos factPedidos = new VentanaFacturarPedidos();
             factPedidos.Show();
             Hide();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

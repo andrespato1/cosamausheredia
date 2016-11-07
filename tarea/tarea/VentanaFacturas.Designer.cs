@@ -31,10 +31,10 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label1 = new System.Windows.Forms.Label();
             this.tbNumFacturaAFacturar = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridFact = new System.Windows.Forms.DataGridView();
             this.btTramitarFactura = new System.Windows.Forms.Button();
             this.btAtrasSeleccionarFactura = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridFact)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -54,13 +54,14 @@
             this.tbNumFacturaAFacturar.Size = new System.Drawing.Size(143, 20);
             this.tbNumFacturaAFacturar.TabIndex = 1;
             // 
-            // dataGridView1
+            // dataGridFact
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 67);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(505, 294);
-            this.dataGridView1.TabIndex = 2;
+            this.dataGridFact.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridFact.Location = new System.Drawing.Point(12, 67);
+            this.dataGridFact.Name = "dataGridFact";
+            this.dataGridFact.Size = new System.Drawing.Size(505, 294);
+            this.dataGridFact.TabIndex = 2;
+            this.dataGridFact.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btTramitarFactura
             // 
@@ -89,13 +90,13 @@
             this.ClientSize = new System.Drawing.Size(532, 379);
             this.Controls.Add(this.btAtrasSeleccionarFactura);
             this.Controls.Add(this.btTramitarFactura);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridFact);
             this.Controls.Add(this.tbNumFacturaAFacturar);
             this.Controls.Add(this.label1);
             this.Name = "VentanaFacturas";
             this.Text = "VentanaFacturas";
             this.Load += new System.EventHandler(this.VentanaFacturas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridFact)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,7 +107,7 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbNumFacturaAFacturar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridFact;
         private System.Windows.Forms.Button btTramitarFactura;
         private System.Windows.Forms.Button btAtrasSeleccionarFactura;
     }

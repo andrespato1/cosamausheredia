@@ -124,7 +124,7 @@ namespace tarea
             abrirConexion();
             string updateQuery = "insert into " + tabla + " values (" + datos + ")";
             SqlCommand comandoEjecutar = new SqlCommand(updateQuery, conexionBaseDatos);
-            //MessageBox.Show(updateQuery, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(updateQuery, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             int resultado = comandoEjecutar.ExecuteNonQuery();
             cerrarConexion();
         }

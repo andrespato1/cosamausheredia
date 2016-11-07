@@ -12,9 +12,13 @@ namespace tarea
 {
     public partial class VentanaPedidos : Form
     {
+        ConexionSQLVisualStudio baseDatos = new ConexionSQLVisualStudio();
+        string nombreTabla = "producto";
+
         public VentanaPedidos()
         {
             InitializeComponent();
+            baseDatos.seleccionarValoresBaseDatos(DataGridPedidos, nombreTabla, "*", "");
         }
 
         private void VentanaPedidos_Load(object sender, EventArgs e)

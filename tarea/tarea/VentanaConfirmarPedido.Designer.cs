@@ -34,11 +34,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.botonBuscarPedido = new System.Windows.Forms.Button();
             this.tbPedidoConfirmar = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridConfirmarPedido = new System.Windows.Forms.DataGridView();
             this.botonConfirmar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.cbEstadoConfirmar = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridConfirmarPedido)).BeginInit();
             this.SuspendLayout();
             // 
             // botonAtras
@@ -92,13 +92,13 @@
             this.tbPedidoConfirmar.Size = new System.Drawing.Size(132, 20);
             this.tbPedidoConfirmar.TabIndex = 5;
             // 
-            // dataGridView1
+            // dataGridConfirmarPedido
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 107);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(459, 135);
-            this.dataGridView1.TabIndex = 6;
+            this.dataGridConfirmarPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridConfirmarPedido.Location = new System.Drawing.Point(24, 107);
+            this.dataGridConfirmarPedido.Name = "dataGridConfirmarPedido";
+            this.dataGridConfirmarPedido.Size = new System.Drawing.Size(459, 135);
+            this.dataGridConfirmarPedido.TabIndex = 6;
             // 
             // botonConfirmar
             // 
@@ -139,7 +139,7 @@
             this.Controls.Add(this.cbEstadoConfirmar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.botonConfirmar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridConfirmarPedido);
             this.Controls.Add(this.tbPedidoConfirmar);
             this.Controls.Add(this.botonBuscarPedido);
             this.Controls.Add(this.label2);
@@ -149,7 +149,7 @@
             this.Name = "VentanaConfirmarPedido";
             this.Text = "VentanaConfirmarPedido";
             this.Load += new System.EventHandler(this.VentanaConfirmarPedido_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridConfirmarPedido)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,7 +163,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button botonBuscarPedido;
         private System.Windows.Forms.TextBox tbPedidoConfirmar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridConfirmarPedido;
         private System.Windows.Forms.Button botonConfirmar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbEstadoConfirmar;

@@ -30,10 +30,10 @@
         {
             this.botonAtras = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.nombreNuevaCondicion = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridCondiciones = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCondiciones)).BeginInit();
             this.SuspendLayout();
             // 
             // botonAtras
@@ -55,12 +55,13 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Ingrese una nueva condicion de pago";
             // 
-            // textBox1
+            // nombreNuevaCondicion
             // 
-            this.textBox1.Location = new System.Drawing.Point(101, 60);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(198, 20);
-            this.textBox1.TabIndex = 2;
+            this.nombreNuevaCondicion.Location = new System.Drawing.Point(101, 60);
+            this.nombreNuevaCondicion.Name = "nombreNuevaCondicion";
+            this.nombreNuevaCondicion.Size = new System.Drawing.Size(198, 20);
+            this.nombreNuevaCondicion.TabIndex = 2;
+            this.nombreNuevaCondicion.TextChanged += new System.EventHandler(this.nombreNuevaCondicion_TextChanged);
             // 
             // btnAgregar
             // 
@@ -70,28 +71,30 @@
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // dataGridView1
+            // dataGridCondiciones
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(51, 113);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(330, 150);
-            this.dataGridView1.TabIndex = 4;
+            this.dataGridCondiciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCondiciones.Location = new System.Drawing.Point(158, 113);
+            this.dataGridCondiciones.Name = "dataGridCondiciones";
+            this.dataGridCondiciones.Size = new System.Drawing.Size(141, 150);
+            this.dataGridCondiciones.TabIndex = 4;
             // 
             // VentanaCondicionPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(470, 321);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridCondiciones);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.nombreNuevaCondicion);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.botonAtras);
             this.Name = "VentanaCondicionPago";
             this.Text = "VentanaCondicionPago";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.VentanaCondicionPago_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCondiciones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,8 +104,8 @@
 
         private System.Windows.Forms.Button botonAtras;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox nombreNuevaCondicion;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridCondiciones;
     }
 }

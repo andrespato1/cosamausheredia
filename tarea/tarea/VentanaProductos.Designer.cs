@@ -166,6 +166,7 @@
             this.DataGridProductos.Name = "DataGridProductos";
             this.DataGridProductos.Size = new System.Drawing.Size(433, 191);
             this.DataGridProductos.TabIndex = 13;
+            this.DataGridProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridProductos_CellContentClick);
             // 
             // TxtBusquedaProductos
             // 

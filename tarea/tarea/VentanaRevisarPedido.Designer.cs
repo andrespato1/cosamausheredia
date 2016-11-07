@@ -30,7 +30,7 @@
         {
             this.botonAtras = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridPedidosRevisar = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.tbPedidoEditar = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,7 +41,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.sistemaDeVentasDataSet1 = new tarea.sistemaDeVentasDataSet();
             this.botonRevisar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tbAgregarAtributo = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridPedidosRevisar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sistemaDeVentasDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,13 +66,14 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "PEDIDOS";
             // 
-            // dataGridView1
+            // dataGridPedidosRevisar
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(79, 40);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(532, 140);
-            this.dataGridView1.TabIndex = 2;
+            this.dataGridPedidosRevisar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridPedidosRevisar.Location = new System.Drawing.Point(79, 40);
+            this.dataGridPedidosRevisar.Name = "dataGridPedidosRevisar";
+            this.dataGridPedidosRevisar.Size = new System.Drawing.Size(532, 140);
+            this.dataGridPedidosRevisar.TabIndex = 2;
+            this.dataGridPedidosRevisar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridPedidosRevisar_CellContentClick);
             // 
             // label2
             // 
@@ -121,6 +123,12 @@
             // cbDatosPedido
             // 
             this.cbDatosPedido.FormattingEnabled = true;
+            this.cbDatosPedido.Items.AddRange(new object[] {
+            "numPedido",
+            "codigoCliente",
+            "fechaPedido",
+            "fechaEstimEntrega",
+            "IDPersonal"});
             this.cbDatosPedido.Location = new System.Drawing.Point(250, 244);
             this.cbDatosPedido.Name = "cbDatosPedido";
             this.cbDatosPedido.Size = new System.Drawing.Size(111, 21);
@@ -152,18 +160,26 @@
             // 
             // botonRevisar
             // 
-            this.botonRevisar.Location = new System.Drawing.Point(415, 258);
+            this.botonRevisar.Location = new System.Drawing.Point(250, 307);
             this.botonRevisar.Name = "botonRevisar";
             this.botonRevisar.Size = new System.Drawing.Size(106, 23);
             this.botonRevisar.TabIndex = 11;
             this.botonRevisar.Text = "REVISAR";
             this.botonRevisar.UseVisualStyleBackColor = true;
             // 
+            // tbAgregarAtributo
+            // 
+            this.tbAgregarAtributo.Location = new System.Drawing.Point(400, 245);
+            this.tbAgregarAtributo.Name = "tbAgregarAtributo";
+            this.tbAgregarAtributo.Size = new System.Drawing.Size(111, 20);
+            this.tbAgregarAtributo.TabIndex = 12;
+            // 
             // VentanaRevisarPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(636, 328);
+            this.ClientSize = new System.Drawing.Size(636, 354);
+            this.Controls.Add(this.tbAgregarAtributo);
             this.Controls.Add(this.botonRevisar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -173,12 +189,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tbPedidoEditar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridPedidosRevisar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.botonAtras);
             this.Name = "VentanaRevisarPedido";
             this.Text = "VentanaRevisarPedido";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.VentanaRevisarPedido_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridPedidosRevisar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sistemaDeVentasDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -189,7 +206,7 @@
 
         private System.Windows.Forms.Button botonAtras;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridPedidosRevisar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbPedidoEditar;
         private System.Windows.Forms.Label label3;
@@ -200,5 +217,6 @@
         private System.Windows.Forms.Label label6;
         private sistemaDeVentasDataSet sistemaDeVentasDataSet1;
         private System.Windows.Forms.Button botonRevisar;
+        private System.Windows.Forms.TextBox tbAgregarAtributo;
     }
 }

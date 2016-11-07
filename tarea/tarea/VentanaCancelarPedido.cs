@@ -12,9 +12,14 @@ namespace tarea
 {
     public partial class VentanaCancelarPedido : Form
     {
+        ConexionSQLVisualStudio baseDatos = new ConexionSQLVisualStudio();
+        string nombreTabla = "pedidos";
+
         public VentanaCancelarPedido()
         {
             InitializeComponent();
+            baseDatos.seleccionarValoresBaseDatos(datagridPedidosACancelar, nombreTabla, "*", "");
+
         }
 
         private void botonAtras_Click(object sender, EventArgs e)
@@ -22,6 +27,11 @@ namespace tarea
             Form1 principal = new Form1();
             principal.Show();
             Hide();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -12,9 +12,13 @@ namespace tarea
 {
     public partial class VentanaConfirmarPedido : Form
     {
+        ConexionSQLVisualStudio baseDatos = new ConexionSQLVisualStudio();
+        string nombreTabla = "pedidos";
+
         public VentanaConfirmarPedido()
         {
             InitializeComponent();
+            baseDatos.seleccionarValoresBaseDatos(dataGridConfirmarPedido, nombreTabla, "*", "");
         }
 
         private void VentanaConfirmarPedido_Load(object sender, EventArgs e)

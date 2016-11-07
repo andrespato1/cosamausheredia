@@ -112,5 +112,10 @@ namespace tarea
             TxtImpuestos.Text = "";
             TxtPrecVtaUnit.Text = "";
         }
+
+        private void DataGridProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

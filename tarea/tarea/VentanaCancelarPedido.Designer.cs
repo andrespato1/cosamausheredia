@@ -30,13 +30,13 @@
         {
             this.botonAtras = new System.Windows.Forms.Button();
             this.PEDIDOS = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.datagridPedidosACancelar = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.tbPedidoCancelar = new System.Windows.Forms.TextBox();
             this.tbMotivoCancelo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.botonProcesarCancelo = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagridPedidosACancelar)).BeginInit();
             this.SuspendLayout();
             // 
             // botonAtras
@@ -59,13 +59,14 @@
             this.PEDIDOS.TabIndex = 1;
             this.PEDIDOS.Text = "PEDIDOS";
             // 
-            // dataGridView1
+            // datagridPedidosACancelar
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(89, 33);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(478, 159);
-            this.dataGridView1.TabIndex = 2;
+            this.datagridPedidosACancelar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagridPedidosACancelar.Location = new System.Drawing.Point(89, 33);
+            this.datagridPedidosACancelar.Name = "datagridPedidosACancelar";
+            this.datagridPedidosACancelar.Size = new System.Drawing.Size(478, 159);
+            this.datagridPedidosACancelar.TabIndex = 2;
+            this.datagridPedidosACancelar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
             // 
@@ -118,12 +119,12 @@
             this.Controls.Add(this.tbMotivoCancelo);
             this.Controls.Add(this.tbPedidoCancelar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.datagridPedidosACancelar);
             this.Controls.Add(this.PEDIDOS);
             this.Controls.Add(this.botonAtras);
             this.Name = "VentanaCancelarPedido";
             this.Text = "VentanaCancelarPedido";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagridPedidosACancelar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,7 +134,7 @@
 
         private System.Windows.Forms.Button botonAtras;
         private System.Windows.Forms.Label PEDIDOS;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView datagridPedidosACancelar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbPedidoCancelar;
         private System.Windows.Forms.TextBox tbMotivoCancelo;
