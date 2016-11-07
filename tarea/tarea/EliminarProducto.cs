@@ -27,7 +27,9 @@ namespace tarea
 
         private void BtnEliminarProducto_Click(object sender, EventArgs e)
         {
-            baseDatos.eliminarValoresBaseDatos(nombreTabla, "SKU", TxtEliminarProducto.Text);
+            string queryActualizar = "update producto set unidEnInventario = 000";
+            baseDatos.actualizarValoresBaseDatos(queryActualizar, "SKU", BtnEliminarProducto.Text);
+            
             baseDatos.seleccionarValoresBaseDatos(DataGridEliminarProducto, nombreTabla, "*", "");
             TxtEliminarProducto.Text = "";
         }
