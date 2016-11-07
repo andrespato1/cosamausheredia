@@ -90,7 +90,9 @@ namespace tarea
 
         private void BtnCondicionPago_Click(object sender, EventArgs e)
         {
-
+            VentanaCondicionPago condPago = new VentanaCondicionPago();
+            condPago.Show();
+            Hide();
         }
 
         private void BtnCtaCobrar_Click(object sender, EventArgs e)
@@ -102,6 +104,20 @@ namespace tarea
         {
             VentanaRevisarPedido pedidorevisar = new VentanaRevisarPedido();
             pedidorevisar.Show();
+            Hide();
+        }
+
+        private void botonCancelar_Click(object sender, EventArgs e)
+        {
+            VentanaCancelarPedido pedidocancelar = new VentanaCancelarPedido();
+            pedidocancelar.Show();
+            Hide();
+        }
+
+        private void botonConfirmarPedido_Click(object sender, EventArgs e)
+        {
+            VentanaConfirmarPedido pedidoconfirmar = new VentanaConfirmarPedido();
+            pedidoconfirmar.Show();
             Hide();
         }
     }

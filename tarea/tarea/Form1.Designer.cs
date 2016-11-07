@@ -140,6 +140,7 @@
             this.botonConfirmarPedido.TabIndex = 12;
             this.botonConfirmarPedido.Text = "Confirmar pedido";
             this.botonConfirmarPedido.UseVisualStyleBackColor = true;
+            this.botonConfirmarPedido.Click += new System.EventHandler(this.botonConfirmarPedido_Click);
             // 
             // botonCancelar
             // 
@@ -149,6 +150,7 @@
             this.botonCancelar.TabIndex = 13;
             this.botonCancelar.Text = "Cancelar pedido";
             this.botonCancelar.UseVisualStyleBackColor = true;
+            this.botonCancelar.Click += new System.EventHandler(this.botonCancelar_Click);
             // 
             // Form1
             // 
