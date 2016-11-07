@@ -47,9 +47,9 @@ namespace tarea
         public void actualizarValoresBaseDatos(string query, string columna, string condicionWhere)
         {
             abrirConexion();
-            string updateQuery = query + " where " + columna + "==" + condicionWhere;
+            string updateQuery = query + " where " + columna + " = " + condicionWhere;
             SqlCommand comandoEjecutar = new SqlCommand(updateQuery, conexionBaseDatos);
-            comandoEjecutar.ExecuteNonQuery();
+            int resultado = comandoEjecutar.ExecuteNonQuery();
             cerrarConexion();
         }
 
@@ -60,9 +60,10 @@ namespace tarea
         public void eliminarValoresBaseDatos(string tabla, string columna, string condicionWhere)
         {
             abrirConexion();
-            string deleteQuery = "delete from " + tabla + " where " + columna + "==" + condicionWhere;
+            string deleteQuery = "delete from " + tabla + " where " + columna + " = " + condicionWhere;
+            MessageBox.Show(deleteQuery, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             SqlCommand comandoEjecutar = new SqlCommand(deleteQuery, conexionBaseDatos);
-            comandoEjecutar.ExecuteNonQuery();
+            int resultado = comandoEjecutar.ExecuteNonQuery();
             cerrarConexion();
         }
 
@@ -77,7 +78,7 @@ namespace tarea
             string selectQuery;
             if (condicion != "")
             {
-                selectQuery = "select " + columna + " from " + tabla + " where " + columna + " like " + condicion + "%'";
+                selectQuery = "select " + columna + " from " + tabla + " where " + columna + " " + condicion;
             }
             else
             {
@@ -101,7 +102,7 @@ namespace tarea
             string selectQuery;
             if (condicion != "")
             {
-                selectQuery = "select * from " + tabla + " where " + columna + " like " + condicion + "%'";
+                selectQuery = "select * from " + tabla + " where " + columna + " " + condicion;
             }
             else
             {
@@ -130,4 +131,3 @@ namespace tarea
 
     }
 }
-
