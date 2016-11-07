@@ -68,6 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CorreoElectronico.cs" />
+    <Compile Include="EstadisticaVtasCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EstadisticaVtasCliente.Designer.cs">
+      <DependentUpon>EstadisticaVtasCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="FacturaPDF.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -195,6 +201,10 @@
     <Compile Include="VentanaProductos.Designer.cs">
       <DependentUpon>VentanaProductos.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="EstadisticaVtasCliente.rdlc" />
+    <EmbeddedResource Include="EstadisticaVtasCliente.resx">
+      <DependentUpon>EstadisticaVtasCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
