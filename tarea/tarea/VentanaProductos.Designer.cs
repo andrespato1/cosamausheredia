@@ -216,6 +216,7 @@
             this.BtnActualizar.TabIndex = 18;
             this.BtnActualizar.Text = "Actualizar";
             this.BtnActualizar.UseVisualStyleBackColor = true;
+            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
             // CheckBoxBusca
             // 

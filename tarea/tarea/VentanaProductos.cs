@@ -39,6 +39,12 @@ namespace tarea
             baseDatos.agregarValoresBaseDatos(nombreTabla, valores);
             baseDatos.seleccionarValoresBaseDatos(DataGridProductos, nombreTabla, "*", "");
 
+            TxtSKU.Text = "";
+            TxtDescripcion.Text = "";
+            TxtUnidInventario.Text = "";
+            TxtCostUnitario.Text = "";
+            TxtImpuestos.Text = "";
+            TxtPrecVtaUnit.Text = "";
         }
 
         private void VentanaProductos_Load(object sender, EventArgs e)
@@ -48,42 +54,13 @@ namespace tarea
 
         private void BtnBusquedaProductos_Click(object sender, EventArgs e)
         {
-            string atributo = CBAtributosProductos.Text;
-            string aBuscar = TxtBusquedaProductos.Text;
-            switch (atributo)
-            {
-                case "SKU":
-                    atributo = "SKU";
-                    aBuscar = "'" + TxtBusquedaProductos.Text;
-                    break;
-                case "Descripcion":
-                    atributo = "descripcion";
-                    aBuscar = "'" + TxtBusquedaProductos.Text ;
-                    break;
-                case "Unidades en Inventario":
-                    atributo = "unidEnInventario";
-                    aBuscar = "'" + TxtBusquedaProductos.Text;
-                    break;
-                case "Costo unitario":
-                    atributo = "costoUnit";
-                    aBuscar = "'" + TxtBusquedaProductos.Text;
-                    break;
-                case "Impuestos":
-                    atributo = "impuesto";
-                    aBuscar = "'" + TxtBusquedaProductos.Text;
-                    break;
-                case "Precio de venta unitario":
-                    atributo = "precioVtaUnit";
-                    aBuscar = "'" + TxtBusquedaProductos.Text;
-                    break;
-            }
             if (CheckBoxBusca.Checked == true)
             {
-                baseDatos.seleccionarValoresBaseDatosTodasLasTablas(DataGridProductos, "producto", atributo, aBuscar);
+                baseDatos.seleccionarValoresBaseDatosTodasLasTablas(DataGridProductos, "producto", CBAtributosProductos.Text, "like '" + TxtBusquedaProductos.Text + "%'");
             }
             else
             {
-                baseDatos.seleccionarValoresBaseDatos(DataGridProductos, "producto", atributo, aBuscar);
+                baseDatos.seleccionarValoresBaseDatos(DataGridProductos, "producto", CBAtributosProductos.Text, "like '" + TxtBusquedaProductos.Text + "%'");
             }
         }
 
@@ -92,6 +69,48 @@ namespace tarea
             Form1 principal = new Form1();
             principal.Show();
             Hide();
+        }
+
+        private void BtnActualizar_Click(object sender, EventArgs e)
+        {
+            string queryActualizar = "";
+            if (TxtSKU.Text != "")
+            {
+                if (TxtDescripcion.Text != "")
+                {
+                    queryActualizar = "update producto set descripcion = '" + TxtDescripcion.Text + "'";
+                    baseDatos.actualizarValoresBaseDatos(queryActualizar, "SKU", TxtSKU.Text);
+                }
+                if (TxtUnidInventario.Text != "")
+                {
+                    queryActualizar = "update producto set unidEnInventario = " + TxtUnidInventario.Text;
+                    baseDatos.actualizarValoresBaseDatos(queryActualizar, "SKU", TxtSKU.Text);
+                }
+                if (TxtCostUnitario.Text != "")
+                {
+                    queryActualizar = "update producto set costoUnit = " + TxtCostUnitario.Text;
+                    baseDatos.actualizarValoresBaseDatos(queryActualizar, "SKU", TxtSKU.Text);
+                }
+                if (TxtImpuestos.Text != "")
+                {
+                    queryActualizar = "update producto set impuesto = " + TxtImpuestos.Text;
+                    baseDatos.actualizarValoresBaseDatos(queryActualizar, "SKU", TxtSKU.Text);
+                }
+                if (TxtPrecVtaUnit.Text != "")
+                {
+                    queryActualizar = "update producto set precioVtaUnit = " + TxtPrecVtaUnit.Text;
+                    baseDatos.actualizarValoresBaseDatos(queryActualizar, "SKU", TxtSKU.Text);
+                }
+            }
+
+            baseDatos.seleccionarValoresBaseDatos(DataGridProductos, nombreTabla, "*", "");
+
+            TxtSKU.Text = "";
+            TxtDescripcion.Text = "";
+            TxtUnidInventario.Text = "";
+            TxtCostUnitario.Text = "";
+            TxtImpuestos.Text = "";
+            TxtPrecVtaUnit.Text = "";
         }
     }
 }
