@@ -63,5 +63,37 @@ namespace tarea
             vtnProductos.Show();
             Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnFacturas_Click(object sender, EventArgs e)
+        {
+            VentanaFacturas facturas = new VentanaFacturas();
+            facturas.Show();
+            Hide();
+        }
+
+        private void BtnCondicionPago_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnCtaCobrar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

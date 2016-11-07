@@ -40,5 +40,12 @@ namespace tarea
             baseDatos.agregarValoresBaseDatos(nombreTabla, valores);
             baseDatos.seleccionarValoresBaseDatos(DataGridPersonal, nombreTabla, "*", "");
         }
+
+        private void botonAtras_Click(object sender, EventArgs e)
+        {
+            Form1 principal = new Form1();
+            principal.Show();
+            Hide();
+        }
     }
 }

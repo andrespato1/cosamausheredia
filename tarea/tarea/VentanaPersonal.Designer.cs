@@ -59,6 +59,7 @@
             this.DataGridPersonal = new System.Windows.Forms.DataGridView();
             this.CBBuscar = new System.Windows.Forms.ComboBox();
             this.TxtBuscar = new System.Windows.Forms.TextBox();
+            this.botonAtras = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridPersonal)).BeginInit();
             this.SuspendLayout();
             // 
@@ -314,11 +315,22 @@
             this.TxtBuscar.Size = new System.Drawing.Size(237, 20);
             this.TxtBuscar.TabIndex = 30;
             // 
+            // botonAtras
+            // 
+            this.botonAtras.Location = new System.Drawing.Point(13, 340);
+            this.botonAtras.Name = "botonAtras";
+            this.botonAtras.Size = new System.Drawing.Size(75, 23);
+            this.botonAtras.TabIndex = 31;
+            this.botonAtras.Text = "Atras";
+            this.botonAtras.UseVisualStyleBackColor = true;
+            this.botonAtras.Click += new System.EventHandler(this.botonAtras_Click);
+            // 
             // VentanaPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(886, 331);
+            this.ClientSize = new System.Drawing.Size(886, 387);
+            this.Controls.Add(this.botonAtras);
             this.Controls.Add(this.TxtBuscar);
             this.Controls.Add(this.CBBuscar);
             this.Controls.Add(this.DataGridPersonal);
@@ -391,5 +403,6 @@
         private System.Windows.Forms.DataGridView DataGridPersonal;
         private System.Windows.Forms.ComboBox CBBuscar;
         private System.Windows.Forms.TextBox TxtBuscar;
+        private System.Windows.Forms.Button botonAtras;
     }
 }

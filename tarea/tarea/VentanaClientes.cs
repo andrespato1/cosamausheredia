@@ -41,5 +41,12 @@ namespace tarea
 
 
         }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            Form1 principal = new Form1();
+            principal.Show();
+            Hide();
+        }
     }
 }

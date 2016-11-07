@@ -21,7 +21,7 @@ namespace tarea
          * con el string de la conexion
          */
         public ConexionSQLVisualStudio() {
-            conexionBaseDatos = new SqlConnection(@"Data Source=PATO\ANDRESSERVER;Initial Catalog=sistemaDeVentas;Integrated Security=True");
+            conexionBaseDatos = new SqlConnection(@"Data Source=INDIANA;Initial Catalog=sistemaDeVentas;Integrated Security=True");
         }
 
         /*
@@ -77,7 +77,7 @@ namespace tarea
             string selectQuery;
             if (condicion != "")
             {
-                selectQuery = "select " + columna + " from " + tabla + " where " + columna + " = " + condicion;
+                selectQuery = "select " + columna + " from " + tabla + " where " + columna + " like " + condicion + "%'";
             }
             else
             {
@@ -101,7 +101,7 @@ namespace tarea
             string selectQuery;
             if (condicion != "")
             {
-                selectQuery = "select * from " + tabla + " where " + columna + " = " + condicion;
+                selectQuery = "select * from " + tabla + " where " + columna + " like " + condicion+"%'";
             }
             else
             {

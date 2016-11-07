@@ -57,6 +57,7 @@
             this.BtnActualizar = new System.Windows.Forms.Button();
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.CBBuscar = new System.Windows.Forms.ComboBox();
+            this.btnAtras = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -296,11 +297,22 @@
             this.CBBuscar.Size = new System.Drawing.Size(190, 21);
             this.CBBuscar.TabIndex = 28;
             // 
+            // btnAtras
+            // 
+            this.btnAtras.Location = new System.Drawing.Point(15, 307);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(75, 23);
+            this.btnAtras.TabIndex = 29;
+            this.btnAtras.Text = "Atras";
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
             // VentanaClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(888, 347);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.CBBuscar);
             this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.BtnActualizar);
@@ -369,5 +381,6 @@
         private System.Windows.Forms.Button BtnActualizar;
         private System.Windows.Forms.Button BtnBuscar;
         private System.Windows.Forms.ComboBox CBBuscar;
+        private System.Windows.Forms.Button btnAtras;
     }
 }

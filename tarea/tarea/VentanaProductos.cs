@@ -54,22 +54,27 @@ namespace tarea
             {
                 case "SKU":
                     atributo = "SKU";
+                    aBuscar = "'" + TxtBusquedaProductos.Text;
                     break;
                 case "Descripcion":
                     atributo = "descripcion";
-                    aBuscar = "'" + TxtBusquedaProductos.Text + "'";
+                    aBuscar = "'" + TxtBusquedaProductos.Text ;
                     break;
                 case "Unidades en Inventario":
                     atributo = "unidEnInventario";
+                    aBuscar = "'" + TxtBusquedaProductos.Text;
                     break;
                 case "Costo unitario":
                     atributo = "costoUnit";
+                    aBuscar = "'" + TxtBusquedaProductos.Text;
                     break;
                 case "Impuestos":
                     atributo = "impuesto";
+                    aBuscar = "'" + TxtBusquedaProductos.Text;
                     break;
                 case "Precio de venta unitario":
                     atributo = "precioVtaUnit";
+                    aBuscar = "'" + TxtBusquedaProductos.Text;
                     break;
             }
             if (CheckBoxBusca.Checked == true)
@@ -80,6 +85,13 @@ namespace tarea
             {
                 baseDatos.seleccionarValoresBaseDatos(DataGridProductos, "producto", atributo, aBuscar);
             }
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            Form1 principal = new Form1();
+            principal.Show();
+            Hide();
         }
     }
 }

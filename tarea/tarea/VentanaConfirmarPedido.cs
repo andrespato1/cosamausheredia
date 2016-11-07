@@ -10,24 +10,14 @@ using System.Windows.Forms;
 
 namespace tarea
 {
-    public partial class VentanaPedidos : Form
+    public partial class VentanaConfirmarPedido : Form
     {
-        public VentanaPedidos()
+        public VentanaConfirmarPedido()
         {
             InitializeComponent();
         }
 
-        private void VentanaPedidos_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbProductoPedir_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DataGridPedidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void VentanaConfirmarPedido_Load(object sender, EventArgs e)
         {
 
         }

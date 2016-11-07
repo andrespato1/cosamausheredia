@@ -48,6 +48,7 @@
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnActualizar = new System.Windows.Forms.Button();
             this.CheckBoxBusca = new System.Windows.Forms.CheckBox();
+            this.btnAtras = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -226,11 +227,22 @@
             this.CheckBoxBusca.Text = "Desea que al realizar la busque se muestren todas las columnas de la tabla";
             this.CheckBoxBusca.UseVisualStyleBackColor = true;
             // 
+            // btnAtras
+            // 
+            this.btnAtras.Location = new System.Drawing.Point(13, 278);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(75, 23);
+            this.btnAtras.TabIndex = 21;
+            this.btnAtras.Text = "Atras";
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
             // VentanaProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(803, 284);
+            this.ClientSize = new System.Drawing.Size(803, 337);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.CheckBoxBusca);
             this.Controls.Add(this.BtnActualizar);
             this.Controls.Add(this.BtnEliminar);
@@ -282,5 +294,6 @@
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Button BtnActualizar;
         private System.Windows.Forms.CheckBox CheckBoxBusca;
+        private System.Windows.Forms.Button btnAtras;
     }
 }

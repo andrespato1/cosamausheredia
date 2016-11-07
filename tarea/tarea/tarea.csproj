@@ -68,12 +68,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CorreoElectronico.cs" />
-    <Compile Include="EstadisticaVtasCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EstadisticaVtasCliente.Designer.cs">
-      <DependentUpon>EstadisticaVtasCliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="FacturaPDF.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -177,11 +171,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>sistemaDeVentasDataSet8.xsd</DependentUpon>
     </Compile>
+    <Compile Include="VentanaCancelarPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaCancelarPedido.Designer.cs">
+      <DependentUpon>VentanaCancelarPedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanaClientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VentanaClientes.Designer.cs">
       <DependentUpon>VentanaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaConfirmarPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaConfirmarPedido.Designer.cs">
+      <DependentUpon>VentanaConfirmarPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaFacturarPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaFacturarPedidos.Designer.cs">
+      <DependentUpon>VentanaFacturarPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaFacturas.Designer.cs">
+      <DependentUpon>VentanaFacturas.cs</DependentUpon>
     </Compile>
     <Compile Include="VentanaPedidos.cs">
       <SubType>Form</SubType>
@@ -201,10 +219,12 @@
     <Compile Include="VentanaProductos.Designer.cs">
       <DependentUpon>VentanaProductos.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="EstadisticaVtasCliente.rdlc" />
-    <EmbeddedResource Include="EstadisticaVtasCliente.resx">
-      <DependentUpon>EstadisticaVtasCliente.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="VentanaRevisarPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaRevisarPedido.Designer.cs">
+      <DependentUpon>VentanaRevisarPedido.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,8 +268,20 @@
     <EmbeddedResource Include="SeleccionDeReportes.resx">
       <DependentUpon>SeleccionDeReportes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VentanaCancelarPedido.resx">
+      <DependentUpon>VentanaCancelarPedido.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanaClientes.resx">
       <DependentUpon>VentanaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaConfirmarPedido.resx">
+      <DependentUpon>VentanaConfirmarPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaFacturarPedidos.resx">
+      <DependentUpon>VentanaFacturarPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaFacturas.resx">
+      <DependentUpon>VentanaFacturas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaPedidos.resx">
       <DependentUpon>VentanaPedidos.cs</DependentUpon>
@@ -259,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaProductos.resx">
       <DependentUpon>VentanaProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaRevisarPedido.resx">
+      <DependentUpon>VentanaRevisarPedido.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

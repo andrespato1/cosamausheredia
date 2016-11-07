@@ -10,29 +10,29 @@ using System.Windows.Forms;
 
 namespace tarea
 {
-    public partial class VentanaPedidos : Form
+    public partial class VentanaFacturas : Form
     {
-        public VentanaPedidos()
+        public VentanaFacturas()
         {
             InitializeComponent();
         }
 
-        private void VentanaPedidos_Load(object sender, EventArgs e)
+        private void VentanaFacturas_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void tbProductoPedir_TextChanged(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void DataGridPedidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void botonAtras_Click(object sender, EventArgs e)
+        private void btAtrasSeleccionarFactura_Click(object sender, EventArgs e)
         {
             Form1 principal = new Form1();
             principal.Show();
