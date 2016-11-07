@@ -84,6 +84,7 @@
             this.botonBuscarPedido.TabIndex = 4;
             this.botonBuscarPedido.Text = "Buscar pedidos";
             this.botonBuscarPedido.UseVisualStyleBackColor = true;
+            this.botonBuscarPedido.Click += new System.EventHandler(this.botonBuscarPedido_Click);
             // 
             // tbPedidoConfirmar
             // 

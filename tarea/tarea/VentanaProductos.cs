@@ -29,8 +29,8 @@ namespace tarea
         {
             //Valores para el insert
             string valores = "";
-            valores = valores + TxtSKU.Text + ",'";
-            valores = valores + TxtDescripcion.Text + "',";
+            valores = valores + TxtSKU.Text + ",";
+            valores = valores + "'"+TxtDescripcion.Text + "'" + ",";
             valores = valores + TxtUnidInventario.Text + ",";
             valores = valores + TxtCostUnitario.Text + ",";
             valores = valores + TxtImpuestos.Text + ",";
