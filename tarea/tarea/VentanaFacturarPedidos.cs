@@ -44,7 +44,9 @@ namespace tarea
 
         private void btAtrasFacturarPedido_Click(object sender, EventArgs e)
         {
-
+            VentanaFacturas factPedidos = new VentanaFacturas();
+            factPedidos.Show();
+            Hide();
         }
     }
 }

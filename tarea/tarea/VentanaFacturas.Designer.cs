@@ -70,6 +70,7 @@
             this.btTramitarFactura.TabIndex = 3;
             this.btTramitarFactura.Text = "Facturar";
             this.btTramitarFactura.UseVisualStyleBackColor = true;
+            this.btTramitarFactura.Click += new System.EventHandler(this.btTramitarFactura_Click);
             // 
             // btAtrasSeleccionarFactura
             // 

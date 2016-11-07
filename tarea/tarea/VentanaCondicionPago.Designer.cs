@@ -44,6 +44,7 @@
             this.botonAtras.TabIndex = 0;
             this.botonAtras.Text = "Atras";
             this.botonAtras.UseVisualStyleBackColor = true;
+            this.botonAtras.Click += new System.EventHandler(this.botonAtras_Click);
             // 
             // label1
             // 

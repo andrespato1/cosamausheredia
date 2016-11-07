@@ -71,18 +71,19 @@
             // 
             // Salir
             // 
-            this.Salir.Location = new System.Drawing.Point(656, 274);
+            this.Salir.Location = new System.Drawing.Point(12, 259);
             this.Salir.Name = "Salir";
             this.Salir.Size = new System.Drawing.Size(75, 23);
             this.Salir.TabIndex = 3;
-            this.Salir.Text = "Salir";
+            this.Salir.Text = "Atras";
             this.Salir.UseVisualStyleBackColor = true;
+            this.Salir.Click += new System.EventHandler(this.Salir_Click);
             // 
             // SeleccionDeReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(743, 309);
+            this.ClientSize = new System.Drawing.Size(643, 309);
             this.Controls.Add(this.Salir);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.SeleccionReporte);

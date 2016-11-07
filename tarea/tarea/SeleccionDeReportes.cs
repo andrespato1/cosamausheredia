@@ -28,7 +28,6 @@ namespace tarea
             
             if (SeleccionReporte.Text == "Reporte de Clientes")
             {
-
                 Rcliente.Show();
                 this.Close();
             }
@@ -59,6 +58,13 @@ namespace tarea
             }
 
             
+        }
+
+        private void Salir_Click(object sender, EventArgs e)
+        {
+            Form1 principal = new Form1();
+            principal.Show();
+            Hide();
         }
     }
 }
