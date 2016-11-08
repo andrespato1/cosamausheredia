@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Diagnostics;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +14,7 @@ namespace tarea
     {
         ConexionSQLVisualStudio baseDatos = new ConexionSQLVisualStudio();
         string nombreTabla = "producto";
+        int i = 0;
 
         public VentanaPedidos()
         {
@@ -40,6 +39,7 @@ namespace tarea
 
         private void botonAtras_Click(object sender, EventArgs e)
         {
+            i = 0;
             Form1 principal = new Form1();
             principal.Show();
             Hide();
@@ -57,7 +57,7 @@ namespace tarea
             var = var + "," + (int.Parse(tbCantidadProducto.Text) * int.Parse(tbPrecioUnit.Text));
 
             baseDatos.agregarValoresBaseDatos("detalleProducto_pedidos", var);
-            tbnumPedido.Text = "";
+            baseDatos.seleccionarValoresBaseDatosTodasLasTablas(dataGridProdPedido, "detalleProducto_pedidos", "numPedido", "= " + tbnumPedido.Text);
             tbSKU.Text = "";
             tbCantidadProducto.Text = "";
             tbPrecioUnit.Text = "";
@@ -67,10 +67,18 @@ namespace tarea
 
         }
 
-        private void ayudaRegPedido_Click(object sender, EventArgs e)
+        private void botonRegistrarPedido_Click(object sender, EventArgs e)
         {
-            string pdfPath = Path.Combine(Application.StartupPath, "manual_de_usuario_ventas.pdf");
-            Process.Start(pdfPath);
+            string var = "";
+            var = var + tbnumPedido.Text;
+            var = var + "," + tbCodigoCliente.Text;
+            var = var + ",'" + tbFechaPedido.Text + "'";
+            var = var + ",'" + tbFechaEntregaP.Text + "'";
+            var = var + "," + tbIDEjecVta.Text;
+            var = var + ",'REGISTRADO'";
+            var = var + ",' '";
+
+            baseDatos.agregarValoresBaseDatos("pedidos", var);
         }
     }
 }
