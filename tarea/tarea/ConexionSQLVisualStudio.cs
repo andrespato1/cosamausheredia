@@ -25,7 +25,7 @@ namespace tarea
         public ConexionSQLVisualStudio() {
             //conexionBaseDatos = new SqlConnection(@"Data Source=PATO\ANDRESSERVER;Initial Catalog=sistemaDeVentas;Integrated Security=True");
            conexionBaseDatos = new SqlConnection(@"Data Source = INDIANA; Initial Catalog = sistemaDeVentas; Integrated Security = True");
-           // conexionBaseDatos = new SqlConnection(@"Data Source=ESTRADAJ\JOSESQLEXPRESS;Initial Catalog=sistemaDeVentas;Integrated Security=True");
+           //conexionBaseDatos = new SqlConnection(@"Data Source=ESTRADAJ\JOSESQLEXPRESS;Initial Catalog=sistemaDeVentas;Integrated Security=True");
         }
 
         /*
