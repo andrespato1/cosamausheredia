@@ -29,32 +29,32 @@ namespace tarea
             if (SeleccionReporte.Text == "Reporte de Clientes")
             {
                 Rcliente.Show();
-                this.Close();
+                
             }
             if (SeleccionReporte.Text == "Reporte de Condiciones de Pago") {
 
                 RCondicion.Show();
-                this.Close();
+               
             }
             if (SeleccionReporte.Text == "Reporte de Catálogo de Productos") {
                 RCatalogo.Show();
-                this.Close();
+                
             }
             if (SeleccionReporte.Text == "Reporte de Pedidos") {
                 Rpedido.Show();
-                this.Close();
+                
             }
             if (SeleccionReporte.Text == "Reporte de Facturas") {
                 RFactura.Show();
-                this.Close();
+                
             }
             if (SeleccionReporte.Text == "Reporte de Cuentas por Cobrar") {
                 RCtasXCobrar.Show();
-                this.Close();
+                
             }
             if (SeleccionReporte.Text == "Reporte de Personal") {
                 Rpersonal.Show();
-                this.Close();
+                
             }
 
             
