@@ -161,6 +161,7 @@
             this.ayudaVentanaPrincipal.TabIndex = 14;
             this.ayudaVentanaPrincipal.Text = "AYUDA";
             this.ayudaVentanaPrincipal.UseVisualStyleBackColor = true;
+            this.ayudaVentanaPrincipal.Click += new System.EventHandler(this.ayudaVentanaPrincipal_Click);
             // 
             // Form1
             // 
