@@ -163,5 +163,10 @@ namespace tarea
         {
 
         }
+
+        private void CBBuscarCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

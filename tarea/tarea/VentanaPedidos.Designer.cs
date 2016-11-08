@@ -311,6 +311,7 @@
             this.ayudaRegPedido.TabIndex = 37;
             this.ayudaRegPedido.Text = "AYUDA";
             this.ayudaRegPedido.UseVisualStyleBackColor = true;
+            this.ayudaRegPedido.Click += new System.EventHandler(this.ayudaRegPedido_Click);
             // 
             // VentanaPedidos
             // 

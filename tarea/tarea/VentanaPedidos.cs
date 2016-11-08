@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -63,6 +65,12 @@ namespace tarea
             tbImpuesto.Text = "";
             tbCantidadProducto.Text = "";
 
+        }
+
+        private void ayudaRegPedido_Click(object sender, EventArgs e)
+        {
+            string pdfPath = Path.Combine(Application.StartupPath, "manual_de_usuario_ventas.pdf");
+            Process.Start(pdfPath);
         }
     }
 }

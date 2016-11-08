@@ -308,10 +308,24 @@
             // CBBuscarPersonal
             // 
             this.CBBuscarPersonal.FormattingEnabled = true;
+            this.CBBuscarPersonal.Items.AddRange(new object[] {
+            "IDPersonal",
+            "puestoTrab",
+            "nombre",
+            "apellido1",
+            "apellido2",
+            "fechaNacim",
+            "telefono",
+            "lugarResid",
+            "email",
+            "IDJefe",
+            "fechaIngreso",
+            "fechaRetiro"});
             this.CBBuscarPersonal.Location = new System.Drawing.Point(624, 59);
             this.CBBuscarPersonal.Name = "CBBuscarPersonal";
             this.CBBuscarPersonal.Size = new System.Drawing.Size(169, 21);
             this.CBBuscarPersonal.TabIndex = 29;
+            this.CBBuscarPersonal.SelectedIndexChanged += new System.EventHandler(this.CBBuscarPersonal_SelectedIndexChanged);
             // 
             // TxtBuscarPersonal
             // 
@@ -349,6 +363,7 @@
             this.ayudaPersonal.TabIndex = 33;
             this.ayudaPersonal.Text = "AYUDA";
             this.ayudaPersonal.UseVisualStyleBackColor = true;
+            this.ayudaPersonal.Click += new System.EventHandler(this.ayudaPersonal_Click);
             // 
             // VentanaPersonal
             // 

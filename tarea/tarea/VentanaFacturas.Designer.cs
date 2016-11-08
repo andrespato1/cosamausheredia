@@ -92,6 +92,7 @@
             this.ayudaFacturas.TabIndex = 5;
             this.ayudaFacturas.Text = "AYUDA";
             this.ayudaFacturas.UseVisualStyleBackColor = true;
+            this.ayudaFacturas.Click += new System.EventHandler(this.ayudaFacturas_Click);
             // 
             // VentanaFacturas
             // 

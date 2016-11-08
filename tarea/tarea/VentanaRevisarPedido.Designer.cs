@@ -183,6 +183,7 @@
             this.ayudaRevisarPedido.TabIndex = 13;
             this.ayudaRevisarPedido.Text = "AYUDA";
             this.ayudaRevisarPedido.UseVisualStyleBackColor = true;
+            this.ayudaRevisarPedido.Click += new System.EventHandler(this.ayudaRevisarPedido_Click);
             // 
             // VentanaRevisarPedido
             // 

@@ -249,6 +249,7 @@
             this.ayudaProducto.TabIndex = 22;
             this.ayudaProducto.Text = "AYUDA";
             this.ayudaProducto.UseVisualStyleBackColor = true;
+            this.ayudaProducto.Click += new System.EventHandler(this.ayudaProducto_Click);
             // 
             // VentanaProductos
             // 

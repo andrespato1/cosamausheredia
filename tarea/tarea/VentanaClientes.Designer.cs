@@ -300,10 +300,22 @@
             // CBBuscarCliente
             // 
             this.CBBuscarCliente.FormattingEnabled = true;
+            this.CBBuscarCliente.Items.AddRange(new object[] {
+            "codigoCliente",
+            "nombre",
+            "direccion",
+            "codigoPostal",
+            "paisUbic",
+            "telefono",
+            "email\t\t\t\t",
+            "fechaInicioR",
+            "limiteCred",
+            "dirEntregaProd"});
             this.CBBuscarCliente.Location = new System.Drawing.Point(556, 43);
             this.CBBuscarCliente.Name = "CBBuscarCliente";
             this.CBBuscarCliente.Size = new System.Drawing.Size(172, 21);
             this.CBBuscarCliente.TabIndex = 28;
+            this.CBBuscarCliente.SelectedIndexChanged += new System.EventHandler(this.CBBuscarCliente_SelectedIndexChanged);
             // 
             // btnAtras
             // 
