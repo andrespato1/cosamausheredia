@@ -27,12 +27,12 @@ namespace tarea
         public void enviarFacturacionPorCorreoElectronico(string destinatario, string ruta){
             try{
                 email.To.Clear();
-                email.Body = "Estimado cliente por este medio se le envia la facturacion de su pedido. Gracias por preferirnos";
-                email.Subject = "Facturacion de pedidos";
+                email.Body = "Estimado cliente por este medio se le envia la notificacion de su pedido. Gracias por preferirnos";
+                email.Subject = "Plataforma pedidos";
                 email.IsBodyHtml = true;
                 email.To.Add(destinatario.Trim());
                 if (ruta != ""){
-                     System.Net.Mail.Attachment archivo = new System.Net.Mail.Attachment(ruta);
+                     System.Net.Mail.Attachment archivo = new System.Net.Mail.Attachment("C:\\Users\\andres\\Desktop\\" + ruta + ".pdf");
                     email.Attachments.Add(archivo);
                  }
                 email.From = new MailAddress("TrabajosUniversitariosTEC@gmail.com");
@@ -41,10 +41,10 @@ namespace tarea
                 webService.Port = 587;
                 webService.EnableSsl = true;
                 webService.Send(email);
-                MessageBox.Show("La facturacion del pedido a sido enviada por correo electronico");
+                MessageBox.Show("El estado del pedido a sido enviada por correo electronico");
             }
             catch (Exception ex){
-                MessageBox.Show(ex.Message, "Fallo la facturacion del pedido intentelo de nuevo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Fallo al enviar el estado del pedido", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

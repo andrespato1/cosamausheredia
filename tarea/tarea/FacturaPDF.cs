@@ -12,23 +12,26 @@ namespace tarea
 {
     class FacturaPDF
     {
+        public string linea1 = "...";
+        public string linea2 = "...";
+        public string linea3 = "...";
         //Atributo el cual extrae la fecha del sistema 
         DateTime thisDay = DateTime.Today;
         //Atributos para generar PDF 
-        public void crearFacturaPDF()
+        public void crearFacturaPDF(string nombreArchibo)
         {
             PdfDocument pdf = new PdfDocument();
             PdfPage pdfPage = pdf.AddPage();
             XGraphics graph = XGraphics.FromPdfPage(pdfPage);
             XFont font = new XFont("Verdana", 20, XFontStyle.Bold);
 
-            graph.DrawString("This is my first PDF document  ", font, XBrushes.Black,
+            graph.DrawString(linea1, font, XBrushes.Black,
             new XRect(0, 0, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
-            graph.DrawString("This is my second PDF document ", font, XBrushes.Black,
+            graph.DrawString(linea2, font, XBrushes.Black,
             new XRect(0, 40, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
-            graph.DrawString("This is my last PDF document", font, XBrushes.Black,
+            graph.DrawString(linea3, font, XBrushes.Black,
             new XRect(0, 80, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.TopLeft);
-            pdf.Save("C:\\Users\\andres\\Desktop\\prueba.pdf");
+            pdf.Save("C:\\Users\\andres\\Desktop\\"+ nombreArchibo + ".pdf");
         }
     }
 }

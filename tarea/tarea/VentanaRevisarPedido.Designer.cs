@@ -125,11 +125,8 @@
             // 
             this.cbDatosPedido.FormattingEnabled = true;
             this.cbDatosPedido.Items.AddRange(new object[] {
-            "numPedido",
-            "codigoCliente",
             "fechaPedido",
-            "fechaEstimEntrega",
-            "IDPersonal"});
+            "fechaEstimEntrega"});
             this.cbDatosPedido.Location = new System.Drawing.Point(250, 244);
             this.cbDatosPedido.Name = "cbDatosPedido";
             this.cbDatosPedido.Size = new System.Drawing.Size(111, 21);
@@ -167,6 +164,7 @@
             this.botonRevisar.TabIndex = 11;
             this.botonRevisar.Text = "REVISAR";
             this.botonRevisar.UseVisualStyleBackColor = true;
+            this.botonRevisar.Click += new System.EventHandler(this.botonRevisar_Click);
             // 
             // tbAgregarAtributo
             // 
@@ -183,7 +181,6 @@
             this.ayudaRevisarPedido.TabIndex = 13;
             this.ayudaRevisarPedido.Text = "AYUDA";
             this.ayudaRevisarPedido.UseVisualStyleBackColor = true;
-            this.ayudaRevisarPedido.Click += new System.EventHandler(this.ayudaRevisarPedido_Click);
             // 
             // VentanaRevisarPedido
             // 
