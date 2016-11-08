@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.IO;
+using System.Diagnostics;
 
 namespace tarea
 {
@@ -128,6 +130,8 @@ namespace tarea
             MessageBox.Show(updateQuery, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             int resultado = comandoEjecutar.ExecuteNonQuery();
             cerrarConexion();
+
+           
         }
 
     }
