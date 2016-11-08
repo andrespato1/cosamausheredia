@@ -264,6 +264,7 @@
             this.botonAgregarProducto.TabIndex = 31;
             this.botonAgregarProducto.Text = "Agregar producto";
             this.botonAgregarProducto.UseVisualStyleBackColor = true;
+            this.botonAgregarProducto.Click += new System.EventHandler(this.botonAgregarProducto_Click);
             // 
             // botonRegistrarPedido
             // 

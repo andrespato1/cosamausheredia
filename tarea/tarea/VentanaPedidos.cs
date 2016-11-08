@@ -42,5 +42,27 @@ namespace tarea
             principal.Show();
             Hide();
         }
+
+        private void botonAgregarProducto_Click(object sender, EventArgs e)
+        {
+            string var = "";
+            var = var + tbnumPedido.Text;
+            var = var + "," + tbSKU.Text;
+            var = var + "," + tbCantidadProducto.Text;
+            var = var + "," + tbPrecioUnit.Text;
+            var = var + "," + tbDescuento.Text;
+            var = var + "," + tbImpuesto.Text;
+            var = var + "," + (int.Parse(tbCantidadProducto.Text) * int.Parse(tbPrecioUnit.Text));
+
+            baseDatos.agregarValoresBaseDatos("detalleProducto_pedidos", var);
+            tbnumPedido.Text = "";
+            tbSKU.Text = "";
+            tbCantidadProducto.Text = "";
+            tbPrecioUnit.Text = "";
+            tbDescuento.Text = "";
+            tbImpuesto.Text = "";
+            tbCantidadProducto.Text = "";
+
+        }
     }
 }
