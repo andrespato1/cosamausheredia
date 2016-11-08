@@ -36,6 +36,7 @@
             this.tbMotivoCancelo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.botonProcesarCancelo = new System.Windows.Forms.Button();
+            this.ayudaPedidosCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.datagridPedidosACancelar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,18 +103,28 @@
             // 
             // botonProcesarCancelo
             // 
-            this.botonProcesarCancelo.Location = new System.Drawing.Point(484, 231);
+            this.botonProcesarCancelo.Location = new System.Drawing.Point(229, 289);
             this.botonProcesarCancelo.Name = "botonProcesarCancelo";
-            this.botonProcesarCancelo.Size = new System.Drawing.Size(75, 23);
+            this.botonProcesarCancelo.Size = new System.Drawing.Size(145, 23);
             this.botonProcesarCancelo.TabIndex = 7;
             this.botonProcesarCancelo.Text = "PROCESAR";
             this.botonProcesarCancelo.UseVisualStyleBackColor = true;
+            // 
+            // ayudaPedidosCancelar
+            // 
+            this.ayudaPedidosCancelar.Location = new System.Drawing.Point(509, 289);
+            this.ayudaPedidosCancelar.Name = "ayudaPedidosCancelar";
+            this.ayudaPedidosCancelar.Size = new System.Drawing.Size(62, 23);
+            this.ayudaPedidosCancelar.TabIndex = 8;
+            this.ayudaPedidosCancelar.Text = "AYUDA";
+            this.ayudaPedidosCancelar.UseVisualStyleBackColor = true;
             // 
             // VentanaCancelarPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(583, 295);
+            this.ClientSize = new System.Drawing.Size(583, 324);
+            this.Controls.Add(this.ayudaPedidosCancelar);
             this.Controls.Add(this.botonProcesarCancelo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbMotivoCancelo);
@@ -140,5 +151,6 @@
         private System.Windows.Forms.TextBox tbMotivoCancelo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button botonProcesarCancelo;
+        private System.Windows.Forms.Button ayudaPedidosCancelar;
     }
 }

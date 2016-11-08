@@ -33,6 +33,7 @@
             this.nombreNuevaCondicion = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dataGridCondiciones = new System.Windows.Forms.DataGridView();
+            this.ayudarCPago = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCondiciones)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,16 +77,26 @@
             // dataGridCondiciones
             // 
             this.dataGridCondiciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridCondiciones.Location = new System.Drawing.Point(158, 113);
+            this.dataGridCondiciones.Location = new System.Drawing.Point(147, 116);
             this.dataGridCondiciones.Name = "dataGridCondiciones";
             this.dataGridCondiciones.Size = new System.Drawing.Size(141, 150);
             this.dataGridCondiciones.TabIndex = 4;
+            // 
+            // ayudarCPago
+            // 
+            this.ayudarCPago.Location = new System.Drawing.Point(357, 269);
+            this.ayudarCPago.Name = "ayudarCPago";
+            this.ayudarCPago.Size = new System.Drawing.Size(75, 23);
+            this.ayudarCPago.TabIndex = 5;
+            this.ayudarCPago.Text = "AYUDAR";
+            this.ayudarCPago.UseVisualStyleBackColor = true;
             // 
             // VentanaCondicionPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(470, 321);
+            this.Controls.Add(this.ayudarCPago);
             this.Controls.Add(this.dataGridCondiciones);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.nombreNuevaCondicion);
@@ -107,5 +118,6 @@
         private System.Windows.Forms.TextBox nombreNuevaCondicion;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dataGridCondiciones;
+        private System.Windows.Forms.Button ayudarCPago;
     }
 }

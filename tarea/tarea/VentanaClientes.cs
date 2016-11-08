@@ -14,10 +14,13 @@ namespace tarea
     {
         ConexionSQLVisualStudio baseDatos = new ConexionSQLVisualStudio();
         string nombreTabla = "cliente";
-        public VentanaClientes()
+        string nombreTabla2 = "condicionPago";
+
+              public VentanaClientes()
         {
             InitializeComponent();
             baseDatos.seleccionarValoresBaseDatos(DataGridClientes, nombreTabla, "*", "");
+            baseDatos.seleccionarValoresBaseDatos(dataGridCondicionPagoEnCliente, nombreTabla2, "*", "");
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)
@@ -154,6 +157,11 @@ namespace tarea
             EliminarCliente vtnaEliminar = new tarea.EliminarCliente();
             vtnaEliminar.Show();
             Hide();
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

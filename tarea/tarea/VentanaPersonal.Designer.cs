@@ -61,6 +61,7 @@
             this.TxtBuscarPersonal = new System.Windows.Forms.TextBox();
             this.botonAtras = new System.Windows.Forms.Button();
             this.checkBusquedaPersonal = new System.Windows.Forms.CheckBox();
+            this.ayudaPersonal = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridPersonal)).BeginInit();
             this.SuspendLayout();
             // 
@@ -258,7 +259,7 @@
             // 
             // BtnAgregar
             // 
-            this.BtnAgregar.Location = new System.Drawing.Point(262, 10);
+            this.BtnAgregar.Location = new System.Drawing.Point(262, 22);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(75, 23);
             this.BtnAgregar.TabIndex = 24;
@@ -278,7 +279,7 @@
             // 
             // BtnActualizar
             // 
-            this.BtnActualizar.Location = new System.Drawing.Point(262, 62);
+            this.BtnActualizar.Location = new System.Drawing.Point(262, 80);
             this.BtnActualizar.Name = "BtnActualizar";
             this.BtnActualizar.Size = new System.Drawing.Size(75, 23);
             this.BtnActualizar.TabIndex = 26;
@@ -288,7 +289,7 @@
             // 
             // BtnEliminar
             // 
-            this.BtnEliminar.Location = new System.Drawing.Point(262, 36);
+            this.BtnEliminar.Location = new System.Drawing.Point(262, 51);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(75, 23);
             this.BtnEliminar.TabIndex = 27;
@@ -340,11 +341,21 @@
             this.checkBusquedaPersonal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.checkBusquedaPersonal.UseVisualStyleBackColor = true;
             // 
+            // ayudaPersonal
+            // 
+            this.ayudaPersonal.Location = new System.Drawing.Point(262, 109);
+            this.ayudaPersonal.Name = "ayudaPersonal";
+            this.ayudaPersonal.Size = new System.Drawing.Size(75, 23);
+            this.ayudaPersonal.TabIndex = 33;
+            this.ayudaPersonal.Text = "AYUDA";
+            this.ayudaPersonal.UseVisualStyleBackColor = true;
+            // 
             // VentanaPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(886, 387);
+            this.Controls.Add(this.ayudaPersonal);
             this.Controls.Add(this.checkBusquedaPersonal);
             this.Controls.Add(this.botonAtras);
             this.Controls.Add(this.TxtBuscarPersonal);
@@ -422,5 +433,6 @@
         private System.Windows.Forms.TextBox TxtBuscarPersonal;
         private System.Windows.Forms.Button botonAtras;
         private System.Windows.Forms.CheckBox checkBusquedaPersonal;
+        private System.Windows.Forms.Button ayudaPersonal;
     }
 }

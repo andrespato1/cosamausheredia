@@ -42,6 +42,7 @@
             this.sistemaDeVentasDataSet1 = new tarea.sistemaDeVentasDataSet();
             this.botonRevisar = new System.Windows.Forms.Button();
             this.tbAgregarAtributo = new System.Windows.Forms.TextBox();
+            this.ayudaRevisarPedido = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPedidosRevisar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sistemaDeVentasDataSet1)).BeginInit();
             this.SuspendLayout();
@@ -174,11 +175,21 @@
             this.tbAgregarAtributo.Size = new System.Drawing.Size(111, 20);
             this.tbAgregarAtributo.TabIndex = 12;
             // 
+            // ayudaRevisarPedido
+            // 
+            this.ayudaRevisarPedido.Location = new System.Drawing.Point(15, 307);
+            this.ayudaRevisarPedido.Name = "ayudaRevisarPedido";
+            this.ayudaRevisarPedido.Size = new System.Drawing.Size(77, 23);
+            this.ayudaRevisarPedido.TabIndex = 13;
+            this.ayudaRevisarPedido.Text = "AYUDA";
+            this.ayudaRevisarPedido.UseVisualStyleBackColor = true;
+            // 
             // VentanaRevisarPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(636, 354);
+            this.Controls.Add(this.ayudaRevisarPedido);
             this.Controls.Add(this.tbAgregarAtributo);
             this.Controls.Add(this.botonRevisar);
             this.Controls.Add(this.label6);
@@ -218,5 +229,6 @@
         private sistemaDeVentasDataSet sistemaDeVentasDataSet1;
         private System.Windows.Forms.Button botonRevisar;
         private System.Windows.Forms.TextBox tbAgregarAtributo;
+        private System.Windows.Forms.Button ayudaRevisarPedido;
     }
 }

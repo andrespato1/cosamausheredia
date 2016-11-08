@@ -31,6 +31,7 @@
             this.btnAtras = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridCtacob = new System.Windows.Forms.DataGridView();
+            this.ayudaCxC = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCtacob)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,11 +64,21 @@
             this.dataGridCtacob.TabIndex = 2;
             this.dataGridCtacob.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // ayudaCxC
+            // 
+            this.ayudaCxC.Location = new System.Drawing.Point(429, 268);
+            this.ayudaCxC.Name = "ayudaCxC";
+            this.ayudaCxC.Size = new System.Drawing.Size(58, 23);
+            this.ayudaCxC.TabIndex = 3;
+            this.ayudaCxC.Text = "AYUDA";
+            this.ayudaCxC.UseVisualStyleBackColor = true;
+            // 
             // VentanaCuentaCobrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(514, 303);
+            this.Controls.Add(this.ayudaCxC);
             this.Controls.Add(this.dataGridCtacob);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAtras);
@@ -84,5 +95,6 @@
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridCtacob;
+        private System.Windows.Forms.Button ayudaCxC;
     }
 }

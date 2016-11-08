@@ -39,6 +39,7 @@
             this.botonRegistrarPedido = new System.Windows.Forms.Button();
             this.botonConfirmarPedido = new System.Windows.Forms.Button();
             this.botonCancelar = new System.Windows.Forms.Button();
+            this.ayudaVentanaPrincipal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnProducto
@@ -152,11 +153,21 @@
             this.botonCancelar.UseVisualStyleBackColor = true;
             this.botonCancelar.Click += new System.EventHandler(this.botonCancelar_Click);
             // 
+            // ayudaVentanaPrincipal
+            // 
+            this.ayudaVentanaPrincipal.Location = new System.Drawing.Point(34, 274);
+            this.ayudaVentanaPrincipal.Name = "ayudaVentanaPrincipal";
+            this.ayudaVentanaPrincipal.Size = new System.Drawing.Size(75, 23);
+            this.ayudaVentanaPrincipal.TabIndex = 14;
+            this.ayudaVentanaPrincipal.Text = "AYUDA";
+            this.ayudaVentanaPrincipal.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(486, 287);
+            this.ClientSize = new System.Drawing.Size(486, 309);
+            this.Controls.Add(this.ayudaVentanaPrincipal);
             this.Controls.Add(this.botonCancelar);
             this.Controls.Add(this.botonConfirmarPedido);
             this.Controls.Add(this.botonRegistrarPedido);
@@ -188,6 +199,7 @@
         private System.Windows.Forms.Button botonRegistrarPedido;
         private System.Windows.Forms.Button botonConfirmarPedido;
         private System.Windows.Forms.Button botonCancelar;
+        private System.Windows.Forms.Button ayudaVentanaPrincipal;
     }
 }
 
