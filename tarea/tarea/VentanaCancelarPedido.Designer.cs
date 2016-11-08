@@ -109,6 +109,7 @@
             this.botonProcesarCancelo.TabIndex = 7;
             this.botonProcesarCancelo.Text = "PROCESAR";
             this.botonProcesarCancelo.UseVisualStyleBackColor = true;
+            this.botonProcesarCancelo.Click += new System.EventHandler(this.botonProcesarCancelo_Click);
             // 
             // ayudaPedidosCancelar
             // 
