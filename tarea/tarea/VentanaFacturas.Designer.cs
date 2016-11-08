@@ -34,6 +34,7 @@
             this.dataGridFact = new System.Windows.Forms.DataGridView();
             this.btTramitarFactura = new System.Windows.Forms.Button();
             this.btAtrasSeleccionarFactura = new System.Windows.Forms.Button();
+            this.ayudaFacturas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridFact)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +66,7 @@
             // 
             // btTramitarFactura
             // 
-            this.btTramitarFactura.Location = new System.Drawing.Point(391, 28);
+            this.btTramitarFactura.Location = new System.Drawing.Point(347, 28);
             this.btTramitarFactura.Name = "btTramitarFactura";
             this.btTramitarFactura.Size = new System.Drawing.Size(83, 23);
             this.btTramitarFactura.TabIndex = 3;
@@ -83,11 +84,21 @@
             this.btAtrasSeleccionarFactura.UseVisualStyleBackColor = true;
             this.btAtrasSeleccionarFactura.Click += new System.EventHandler(this.btAtrasSeleccionarFactura_Click);
             // 
+            // ayudaFacturas
+            // 
+            this.ayudaFacturas.Location = new System.Drawing.Point(212, 370);
+            this.ayudaFacturas.Name = "ayudaFacturas";
+            this.ayudaFacturas.Size = new System.Drawing.Size(83, 23);
+            this.ayudaFacturas.TabIndex = 5;
+            this.ayudaFacturas.Text = "AYUDA";
+            this.ayudaFacturas.UseVisualStyleBackColor = true;
+            // 
             // VentanaFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 379);
+            this.ClientSize = new System.Drawing.Size(528, 405);
+            this.Controls.Add(this.ayudaFacturas);
             this.Controls.Add(this.btAtrasSeleccionarFactura);
             this.Controls.Add(this.btTramitarFactura);
             this.Controls.Add(this.dataGridFact);
@@ -110,5 +121,6 @@
         private System.Windows.Forms.DataGridView dataGridFact;
         private System.Windows.Forms.Button btTramitarFactura;
         private System.Windows.Forms.Button btAtrasSeleccionarFactura;
+        private System.Windows.Forms.Button ayudaFacturas;
     }
 }

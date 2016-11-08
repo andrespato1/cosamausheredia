@@ -59,7 +59,10 @@
             this.CBBuscarCliente = new System.Windows.Forms.ComboBox();
             this.btnAtras = new System.Windows.Forms.Button();
             this.checkBusquedaCliente = new System.Windows.Forms.CheckBox();
+            this.dataGridCondicionPagoEnCliente = new System.Windows.Forms.DataGridView();
+            this.ayudaCliente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCondicionPagoEnCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // TxtCodigoCliente
@@ -134,9 +137,9 @@
             // 
             // TxtBusquedaCliente
             // 
-            this.TxtBusquedaCliente.Location = new System.Drawing.Point(378, 43);
+            this.TxtBusquedaCliente.Location = new System.Drawing.Point(360, 43);
             this.TxtBusquedaCliente.Name = "TxtBusquedaCliente";
-            this.TxtBusquedaCliente.Size = new System.Drawing.Size(221, 20);
+            this.TxtBusquedaCliente.Size = new System.Drawing.Size(190, 20);
             this.TxtBusquedaCliente.TabIndex = 9;
             // 
             // TxtCredito
@@ -178,9 +181,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(12, 119);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 13);
+            this.label4.Size = new System.Drawing.Size(27, 13);
             this.label4.TabIndex = 15;
-            this.label4.Text = "Ubicacion";
+            this.label4.Text = "Pais";
             // 
             // label5
             // 
@@ -223,9 +226,9 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(12, 223);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 13);
+            this.label9.Size = new System.Drawing.Size(84, 13);
             this.label9.TabIndex = 21;
-            this.label9.Text = "Credito";
+            this.label9.Text = "Limite de credito";
             // 
             // label10
             // 
@@ -241,16 +244,17 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(12, 276);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(54, 13);
+            this.label11.Size = new System.Drawing.Size(96, 13);
             this.label11.TabIndex = 19;
-            this.label11.Text = "Condicion";
+            this.label11.Text = "Condicion de pago";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // DataGridClientes
             // 
             this.DataGridClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridClientes.Location = new System.Drawing.Point(378, 79);
+            this.DataGridClientes.Location = new System.Drawing.Point(360, 70);
             this.DataGridClientes.Name = "DataGridClientes";
-            this.DataGridClientes.Size = new System.Drawing.Size(498, 256);
+            this.DataGridClientes.Size = new System.Drawing.Size(456, 256);
             this.DataGridClientes.TabIndex = 23;
             // 
             // BtnAgregar
@@ -285,7 +289,7 @@
             // 
             // BtnBuscarCliente
             // 
-            this.BtnBuscarCliente.Location = new System.Drawing.Point(801, 41);
+            this.BtnBuscarCliente.Location = new System.Drawing.Point(741, 43);
             this.BtnBuscarCliente.Name = "BtnBuscarCliente";
             this.BtnBuscarCliente.Size = new System.Drawing.Size(75, 23);
             this.BtnBuscarCliente.TabIndex = 27;
@@ -296,14 +300,14 @@
             // CBBuscarCliente
             // 
             this.CBBuscarCliente.FormattingEnabled = true;
-            this.CBBuscarCliente.Location = new System.Drawing.Point(605, 43);
+            this.CBBuscarCliente.Location = new System.Drawing.Point(556, 43);
             this.CBBuscarCliente.Name = "CBBuscarCliente";
-            this.CBBuscarCliente.Size = new System.Drawing.Size(190, 21);
+            this.CBBuscarCliente.Size = new System.Drawing.Size(172, 21);
             this.CBBuscarCliente.TabIndex = 28;
             // 
             // btnAtras
             // 
-            this.btnAtras.Location = new System.Drawing.Point(15, 307);
+            this.btnAtras.Location = new System.Drawing.Point(9, 393);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(75, 23);
             this.btnAtras.TabIndex = 29;
@@ -314,18 +318,37 @@
             // checkBusquedaCliente
             // 
             this.checkBusquedaCliente.AutoSize = true;
-            this.checkBusquedaCliente.Location = new System.Drawing.Point(378, 10);
+            this.checkBusquedaCliente.Location = new System.Drawing.Point(360, 14);
             this.checkBusquedaCliente.Name = "checkBusquedaCliente";
             this.checkBusquedaCliente.Size = new System.Drawing.Size(272, 17);
             this.checkBusquedaCliente.TabIndex = 30;
             this.checkBusquedaCliente.Text = "Desea visualizar todas las columnas en la busqueda";
             this.checkBusquedaCliente.UseVisualStyleBackColor = true;
             // 
+            // dataGridCondicionPagoEnCliente
+            // 
+            this.dataGridCondicionPagoEnCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCondicionPagoEnCliente.Location = new System.Drawing.Point(125, 310);
+            this.dataGridCondicionPagoEnCliente.Name = "dataGridCondicionPagoEnCliente";
+            this.dataGridCondicionPagoEnCliente.Size = new System.Drawing.Size(138, 65);
+            this.dataGridCondicionPagoEnCliente.TabIndex = 31;
+            // 
+            // ayudaCliente
+            // 
+            this.ayudaCliente.Location = new System.Drawing.Point(692, 380);
+            this.ayudaCliente.Name = "ayudaCliente";
+            this.ayudaCliente.Size = new System.Drawing.Size(75, 23);
+            this.ayudaCliente.TabIndex = 32;
+            this.ayudaCliente.Text = "AYUDA";
+            this.ayudaCliente.UseVisualStyleBackColor = true;
+            // 
             // VentanaClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(888, 347);
+            this.ClientSize = new System.Drawing.Size(827, 428);
+            this.Controls.Add(this.ayudaCliente);
+            this.Controls.Add(this.dataGridCondicionPagoEnCliente);
             this.Controls.Add(this.checkBusquedaCliente);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.CBBuscarCliente);
@@ -361,6 +384,7 @@
             this.Text = "VentanaClientes";
             this.Load += new System.EventHandler(this.VentanaClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCondicionPagoEnCliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -399,5 +423,7 @@
         private System.Windows.Forms.ComboBox CBBuscarCliente;
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.CheckBox checkBusquedaCliente;
+        private System.Windows.Forms.DataGridView dataGridCondicionPagoEnCliente;
+        private System.Windows.Forms.Button ayudaCliente;
     }
 }

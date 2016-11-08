@@ -38,6 +38,7 @@
             this.botonConfirmar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.cbEstadoConfirmar = new System.Windows.Forms.ComboBox();
+            this.ayudaConfirmarPedido = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridConfirmarPedido)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,6 +85,7 @@
             this.botonBuscarPedido.TabIndex = 4;
             this.botonBuscarPedido.Text = "Buscar pedidos";
             this.botonBuscarPedido.UseVisualStyleBackColor = true;
+            this.botonBuscarPedido.Click += new System.EventHandler(this.botonBuscarPedido_Click);
             // 
             // tbPedidoConfirmar
             // 
@@ -131,11 +133,21 @@
             this.cbEstadoConfirmar.Size = new System.Drawing.Size(121, 21);
             this.cbEstadoConfirmar.TabIndex = 9;
             // 
+            // ayudaConfirmarPedido
+            // 
+            this.ayudaConfirmarPedido.Location = new System.Drawing.Point(429, 261);
+            this.ayudaConfirmarPedido.Name = "ayudaConfirmarPedido";
+            this.ayudaConfirmarPedido.Size = new System.Drawing.Size(54, 23);
+            this.ayudaConfirmarPedido.TabIndex = 10;
+            this.ayudaConfirmarPedido.Text = "AYUDA";
+            this.ayudaConfirmarPedido.UseVisualStyleBackColor = true;
+            // 
             // VentanaConfirmarPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(506, 349);
+            this.Controls.Add(this.ayudaConfirmarPedido);
             this.Controls.Add(this.cbEstadoConfirmar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.botonConfirmar);
@@ -167,5 +179,6 @@
         private System.Windows.Forms.Button botonConfirmar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbEstadoConfirmar;
+        private System.Windows.Forms.Button ayudaConfirmarPedido;
     }
 }

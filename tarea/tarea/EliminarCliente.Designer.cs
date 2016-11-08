@@ -79,6 +79,7 @@
             this.BtnAtras.TabIndex = 5;
             this.BtnAtras.Text = "Atras";
             this.BtnAtras.UseVisualStyleBackColor = true;
+            this.BtnAtras.Click += new System.EventHandler(this.BtnAtras_Click);
             // 
             // EliminarCliente
             // 

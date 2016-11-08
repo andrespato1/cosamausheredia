@@ -18,7 +18,7 @@ namespace tarea
         public VentanaConfirmarPedido()
         {
             InitializeComponent();
-            baseDatos.seleccionarValoresBaseDatos(dataGridConfirmarPedido, nombreTabla, "*", "");
+            
         }
 
         private void VentanaConfirmarPedido_Load(object sender, EventArgs e)
@@ -31,6 +31,11 @@ namespace tarea
             Form1 principal = new Form1();
             principal.Show();
             Hide();
+        }
+
+        private void botonBuscarPedido_Click(object sender, EventArgs e)
+        {
+            baseDatos.seleccionarValoresBaseDatos(dataGridConfirmarPedido, nombreTabla, "*", "");
         }
     }
 }

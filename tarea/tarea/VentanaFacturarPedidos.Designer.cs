@@ -50,6 +50,7 @@
             this.tbDirEntrega = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.tbCantProductos = new System.Windows.Forms.TextBox();
+            this.ayudaFacturarPedido = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgPedidoSeleccionado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgProductosDelPedido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -245,11 +246,21 @@
             this.tbCantProductos.Size = new System.Drawing.Size(73, 20);
             this.tbCantProductos.TabIndex = 21;
             // 
+            // ayudaFacturarPedido
+            // 
+            this.ayudaFacturarPedido.Location = new System.Drawing.Point(23, 367);
+            this.ayudaFacturarPedido.Name = "ayudaFacturarPedido";
+            this.ayudaFacturarPedido.Size = new System.Drawing.Size(59, 23);
+            this.ayudaFacturarPedido.TabIndex = 22;
+            this.ayudaFacturarPedido.Text = "AYUDA";
+            this.ayudaFacturarPedido.UseVisualStyleBackColor = true;
+            // 
             // VentanaFacturarPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(579, 363);
+            this.ClientSize = new System.Drawing.Size(579, 402);
+            this.Controls.Add(this.ayudaFacturarPedido);
             this.Controls.Add(this.tbCantProductos);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.tbDirEntrega);
@@ -306,5 +317,6 @@
         private System.Windows.Forms.TextBox tbDirEntrega;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tbCantProductos;
+        private System.Windows.Forms.Button ayudaFacturarPedido;
     }
 }

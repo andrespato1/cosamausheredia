@@ -49,6 +49,7 @@
             this.BtnActualizar = new System.Windows.Forms.Button();
             this.CheckBoxBusca = new System.Windows.Forms.CheckBox();
             this.btnAtras = new System.Windows.Forms.Button();
+            this.ayudaProducto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -208,6 +209,7 @@
             this.BtnEliminar.TabIndex = 17;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnActualizar
             // 
@@ -239,11 +241,21 @@
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
+            // ayudaProducto
+            // 
+            this.ayudaProducto.Location = new System.Drawing.Point(691, 291);
+            this.ayudaProducto.Name = "ayudaProducto";
+            this.ayudaProducto.Size = new System.Drawing.Size(100, 24);
+            this.ayudaProducto.TabIndex = 22;
+            this.ayudaProducto.Text = "AYUDA";
+            this.ayudaProducto.UseVisualStyleBackColor = true;
+            // 
             // VentanaProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(803, 337);
+            this.Controls.Add(this.ayudaProducto);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.CheckBoxBusca);
             this.Controls.Add(this.BtnActualizar);
@@ -297,5 +309,6 @@
         private System.Windows.Forms.Button BtnActualizar;
         private System.Windows.Forms.CheckBox CheckBoxBusca;
         private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.Button ayudaProducto;
     }
 }
